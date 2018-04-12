@@ -17,7 +17,10 @@ Search Menu<br>
 	String anyErrors = request.getParameter("Error");
 	if(anyErrors!=null && anyErrors.equals("-1")){
 		out.println("YOU'RE TRYING TO GET IN COLLEGE MORON! FILL OUT THE FORMS!<br>");
-	}	
+	}
+	if(anyErrors!=null && anyErrors.equals("-2")){
+		out.println("The ranges of some inputs are out of bounds. Make sure no inputs are negative.<br>");
+	}
 %>
   <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
     <tbody>
@@ -63,19 +66,19 @@ Search Menu<br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">by % FEMALE<br>
+        <td style="vertical-align: top;">by % FEMALE (0-100)<br>
         </td>
         <td style="vertical-align: top;">between <input name="FemPerc1"value="0"> and <input name="FemPerc2" value="99999"><br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">by SAT VERBAL<br>
+        <td style="vertical-align: top;">by SAT VERBAL (0-800)<br>
         </td>
         <td style="vertical-align: top;">between <input name="SatV1"value="0"> and <input name="SatV2" value="99999"><br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">by SAT MATH<br>
+        <td style="vertical-align: top;">by SAT MATH (0-800)<br>
         </td>
         <td style="vertical-align: top;">between <input name="SatM1"value="0"> and <input name="SatM2" value="99999"><br>
         </td>
@@ -86,7 +89,7 @@ Search Menu<br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">by % FINANCIAL AID<br>
+        <td style="vertical-align: top;">by % FINANCIAL AID (0-100)<br>
         </td>
         <td style="vertical-align: top;">between <input name="FinAidPerc1"value="0"> and <input name="FinAidPerc2" value="99999"><br>
         </td>
@@ -98,13 +101,13 @@ Search Menu<br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">by % ADMITTED<br>
+        <td style="vertical-align: top;">by % ADMITTED (0-100)<br>
         </td>
         <td style="vertical-align: top;">between <input name="Admitted1"value="0"> and <input name="Admitted2" value="99999"><br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">by % ENROLLED<br>
+        <td style="vertical-align: top;">by % ENROLLED (0-100)<br>
         </td>
         <td style="vertical-align: top;">between <input name="Enrolled1"value="0"> and <input name="Enrolled2" value="99999"><br>
         </td>
