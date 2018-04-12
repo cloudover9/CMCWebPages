@@ -56,12 +56,17 @@ public class AccountController {
 			return 4;
 		}
 		// both filled, password incorrect
-		else if (!matchedUser.getPassword().equals(password)) {
+		else if (!matchedUser.getPassword().equals(password) && matchedUser.getUsername().equals(username)) {
 			return 5;
 		}
 		// user is deactivated
 		else if (matchedUser.getActive() == 'N') {
 			return 6;
+		}
+		
+		// user's username is incorrect
+		else if (!matchedUser.getUsername().equals(username) && matchedUser.getPassword().equals(password)) {
+			return 7;
 		}
 		// works; both match and user is active
 		else{

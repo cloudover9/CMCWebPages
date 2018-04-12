@@ -79,6 +79,10 @@
 			femPerc1, femPerc2, satV1, satV2, satM1, satM2, cost1, cost2, finAidPerc1, finAidPerc2, 
 			applicants1, applicants2, admitted1, admitted2, enrolled1, enrolled2, acadScale1, acadScale2, 
 			socScale1, socScale2, qualScale1, qualScale2, emphases);
+	if(searchedUniversities==null){
+		response.sendRedirect("SearchMenu.jsp?Error=-2");
+		return;
+	}
 %>
 <body>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">

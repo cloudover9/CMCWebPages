@@ -59,8 +59,19 @@ public class SearchController{
                                       ArrayList<String> emphases){
 	  
 	  //CHECK FOR ERRORS, RETURN NULL IF THERE IS AN ERROR
-	  if(studentsLow<0 || femPercLow<0 || satVLow<0) {
-		  
+	  if(studentsLow<0 || femPercLow<0 || satVLow<0 || satMLow<0 || costLow<0 || finAidPercLow<0 || applicantsLow<0 || admittedLow<0 || enrolledLow<0
+			  || acadScaleLow<1 || socLifeScaleLow<1 || qualLifeScaleLow<1) {
+		  return null;
+	  }
+	  if(studentsHigh<studentsLow || femPercHigh<femPercLow || satVHigh<satVLow || satMHigh<satMLow || costHigh<costLow || finAidPercHigh<finAidPercLow
+			  || applicantsHigh<applicantsLow || admittedHigh<admittedLow || enrolledHigh<enrolledLow || acadScaleHigh<acadScaleLow ||
+			  socLifeScaleHigh<socLifeScaleLow || qualLifeScaleHigh<qualLifeScaleLow) {
+		  return null;
+	  }
+	  if( femPercHigh>100 || satVHigh>800 || satMHigh>800 || finAidPercHigh>100
+			  || admittedHigh>100 || enrolledHigh>100 || acadScaleHigh>5 ||
+			  socLifeScaleHigh>5 || qualLifeScaleHigh>5) {
+		  return null;
 	  }
 	  
 	  
