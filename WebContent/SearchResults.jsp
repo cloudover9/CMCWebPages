@@ -9,7 +9,7 @@
 	UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
 	SearchController sc = new SearchController();
 	
-	//check for errors
+	//check for errors if anything is empty
 	String schoolName = request.getParameter("SchoolName");
 	String state = request.getParameter("State");
 	String location = request.getParameter("Location");
