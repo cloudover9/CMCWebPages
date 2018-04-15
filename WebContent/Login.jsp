@@ -8,18 +8,25 @@
 <form action="Login_action.jsp" method="post" name="Login">
 
 <%
+
 String anyErrors = request.getParameter("Error");
 if(anyErrors!=null && anyErrors.equals("-1")){
-	out.println("One or more of the fields are empty. Please fill out the form.<br>");
+
+	out.println("Sorry, you must submit log in credentials!<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-2")){
-	out.println("The username is invalid.<br>");
+	out.println("Sorry, your account is unregistered!<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-3")){
-	out.println("The password is invalid.<br>");
+	out.println("Sorry, your password is incorrect! Please log in again! <br>");
 }
 if(anyErrors!=null && anyErrors.equals("-4")){
-	out.println("<Your account has been deactivated.br>");
+	out.println("Sorry, your account is deactivated! >:c<br>");
+}
+
+if(anyErrors!=null && anyErrors.equals("-5")){
+	out.println("Sorry your username is incorrect! Please log in again! >:c<br>");
+
 }
 %>
 
@@ -35,7 +42,7 @@ if(anyErrors!=null && anyErrors.equals("-4")){
       <tr>
         <td style="vertical-align: middle; text-align: center;">Password<br>
         </td>
-        <td style="vertical-align: middle; text-align: center;"><input name="Password"><br>
+        <td style="vertical-align: middle; text-align: center;"><input type="password" name="Password"><br>
         </td>
       </tr>
       <tr>
