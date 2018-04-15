@@ -10,16 +10,16 @@
 <%
 String anyErrors = request.getParameter("Error");
 if(anyErrors!=null && anyErrors.equals("-1")){
-	out.println("YOU'RE TRYING TO GET IN COLLEGE MORON! FILL OUT THE FORMS!<br>");
+	out.println("One or more of the fields are empty. Please fill out the form.<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-2")){
-	out.println("SORRY, BUT THIS IS A MEMBERS ONLY CLUB. GET OUT!<br>");
+	out.println("The username is invalid.<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-3")){
-	out.println("YOU SHALL NOT PASSSSSSS! (YOUR PASSWORD IS WRONG....)<br>");
+	out.println("The password is invalid.<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-4")){
-	out.println("YOU'VE ALREADY BEEN KICKED OUT. GET LOST ALREADY! >:c<br>");
+	out.println("<Your account has been deactivated.br>");
 }
 %>
 

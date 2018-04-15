@@ -12,6 +12,19 @@
 
 <body>
 <form method="post" action="EditAccount_action.jsp" name="EditAccount">
+<% 
+String anyErrors = request.getParameter("Error");
+if(anyErrors!=null && anyErrors.equals("-1")){
+	out.println("One or more of the fields are empty. Please fill out the form.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-2")){
+	out.println("The username is invalid.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-3")){
+	out.println("The password is invalid.<br>");
+}
+%>
+
   <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>

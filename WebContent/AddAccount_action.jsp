@@ -3,7 +3,15 @@
 	AdminFuncController afc = (AdminFuncController)session.getAttribute("AdminController");
 	String username = request.getParameter("Username");	
 	Account acc = afc.getAccount(username);
-	afc.addAccount(request.getParameter("Username"), request.getParameter("Password"), 
+	int add = afc.addAccount(request.getParameter("Username"), request.getParameter("Password"), 
 			request.getParameter("FirstName"), request.getParameter("LastName"), request.getParameter("Type"));
-	response.sendRedirect("AdminHomepage.jsp");
+	if(add==-1){
+		response.sendRedirect("AdminHomepage.jsp&Error=-1");
+	}
+	else if(add==-2){
+		response.sendRedirect("AdminHomepage.jsp&Error=-2");
+	}
+	else{
+		response.sendRedirect("AdminHomepage.jsp");
+	}
 %>
