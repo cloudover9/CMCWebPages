@@ -4,6 +4,17 @@
   
 </head><body>
 <form method="post" action="AddAccount_action.jsp" name="AddAccount">
+
+<%
+String anyErrors = request.getParameter("Error");
+if(anyErrors!=null && anyErrors.equals("-1")){
+	out.println("the username already exists. Choose a different username.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-2")){
+	out.println("The type must be either 'u' or 'a'.<br>");
+}
+%>
+
   <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>

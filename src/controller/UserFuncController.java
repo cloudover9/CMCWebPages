@@ -203,24 +203,25 @@ public class UserFuncController
    * Takes the edit file command and redirect the user to the edit page
    */
 
-  public void editProfile(GeneralUser account, String firstName, String lastName, String password)
+  public int editProfile(GeneralUser account, String firstName, String lastName, String password)
   {
 		if (firstName == "") {
-			throw new IllegalArgumentException("Error: The firstname field is empty.");
+			return -1;
 		}
 		account.setFirstName(firstName);
 
 		if (lastName == "") {
-			throw new IllegalArgumentException("Error: The lastname field is empty.");
+			return -2;
 		}
 		account.setLastName(lastName);
 
 		if (password == "" || password.contains(" ")) {
-			throw new IllegalArgumentException("Invalid Password");
+			return -3;
 		}
 		account.setPassword(password);
 
 
 		db.updateAccount(account);
+		return 0;
 	}
 }

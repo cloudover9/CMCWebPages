@@ -8,18 +8,25 @@
 <form action="Login_action.jsp" method="post" name="Login">
 
 <%
+
 String anyErrors = request.getParameter("Error");
 if(anyErrors!=null && anyErrors.equals("-1")){
-	out.println("YOU'RE TRYING TO GET IN COLLEGE MORON! FILL OUT THE FORMS!<br>");
+
+	out.println("Sorry, you must submit log in credentials!<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-2")){
-	out.println("SORRY, BUT THIS IS A MEMBERS ONLY CLUB. GET OUT!<br>");
+	out.println("Sorry, your account is unregistered!<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-3")){
-	out.println("YOU SHALL NOT PASSSSSSS! (YOUR PASSWORD IS WRONG....)<br>");
+	out.println("Sorry, your password is incorrect! Please log in again! <br>");
 }
 if(anyErrors!=null && anyErrors.equals("-4")){
-	out.println("YOU'VE ALREADY BEEN KICKED OUT. GET LOST ALREADY! >:c<br>");
+	out.println("Sorry, your account is deactivated! >:c<br>");
+}
+
+if(anyErrors!=null && anyErrors.equals("-5")){
+	out.println("Sorry your username is incorrect! Please log in again! >:c<br>");
+
 }
 %>
 
@@ -35,7 +42,7 @@ if(anyErrors!=null && anyErrors.equals("-4")){
       <tr>
         <td style="vertical-align: middle; text-align: center;">Password<br>
         </td>
-        <td style="vertical-align: middle; text-align: center;"><input name="Password"><br>
+        <td style="vertical-align: middle; text-align: center;"><input type="password" name="Password"><br>
         </td>
       </tr>
       <tr>
