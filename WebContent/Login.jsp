@@ -35,7 +35,7 @@ if(anyErrors!=null && anyErrors.equals("-4")){
       <tr>
         <td style="vertical-align: middle; text-align: center;">Password<br>
         </td>
-        <td style="vertical-align: middle; text-align: center;"><input name="Password"><br>
+        <td style="vertical-align: middle; text-align: center;"><input type="password" name="Password"><br>
         </td>
       </tr>
       <tr>
