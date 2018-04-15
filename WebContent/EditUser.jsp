@@ -58,6 +58,7 @@ if(anyErrors!=null && anyErrors.equals("-3")){
     </tbody>
   </table>
   <input name="Edit User" value="Edit User" type="submit"> 
+ 
   <input name="Reset" value="Reset" type="reset"><br>
 </form>
 
