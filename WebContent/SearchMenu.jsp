@@ -18,17 +18,20 @@ Search Menu<br>
 	if(anyErrors!=null && anyErrors.equals("-1")){
 		out.println("One or more of the fields are empty. Please fill out the forms.<br>");
 	}
-	if(anyErrors!=null && anyErrors.equals("-2")){
+	else if(anyErrors!=null && anyErrors.equals("-2")){
 		out.println("The low fields are negative.<br>");
 	}
-	if(anyErrors!=null && anyErrors.equals("-3")){
+	else if(anyErrors!=null && anyErrors.equals("-3")){
 		out.println("The high fields are less than the low fields.<br>");
 	}
-	if(anyErrors!=null && anyErrors.equals("-4")){
+	else if(anyErrors!=null && anyErrors.equals("-4")){
 		out.println("The high fields are greater than their assigned limit.<br>");
 	}
-	if(anyErrors!=null && anyErrors.equals("-5")){
+	else if(anyErrors!=null && anyErrors.equals("-5")){
 		out.println("NO MATCHES FOUND.<br>");
+	}
+	else if(anyErrors!=null && anyErrors.equals("-6")){
+		out.println("The fields that hold a number has a letter in it. Change these to a number.<br>");
 	}
 %>
   <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">

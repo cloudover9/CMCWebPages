@@ -29,32 +29,61 @@
 			response.sendRedirect("SearchMenu.jsp?Error=-1");
 			return;
 	}
-	//set the inputs from the user
-	int students1 = Integer.parseInt(request.getParameter("Students1"));
-	int students2 = Integer.parseInt(request.getParameter("Students2"));
-	int femPerc1 = Integer.parseInt(request.getParameter("FemPerc1"));
-	int femPerc2 = Integer.parseInt(request.getParameter("FemPerc2"));
-	int satV1 = Integer.parseInt(request.getParameter("SatV1"));
-	int satV2 = Integer.parseInt(request.getParameter("SatV2"));
-	int satM1 = Integer.parseInt(request.getParameter("SatM1"));
-	int satM2 = Integer.parseInt(request.getParameter("SatM2"));
-	int cost1 = Integer.parseInt(request.getParameter("Cost1"));
-	int cost2 = Integer.parseInt(request.getParameter("Cost2"));
-	int finAidPerc1 = Integer.parseInt(request.getParameter("FinAidPerc1"));
-	int finAidPerc2 = Integer.parseInt(request.getParameter("FinAidPerc2"));
-	int applicants1 = Integer.parseInt(request.getParameter("Applicants1"));
-	int applicants2 = Integer.parseInt(request.getParameter("Applicants2"));
-	int admitted1 = Integer.parseInt(request.getParameter("Admitted1"));
-	int admitted2 = Integer.parseInt(request.getParameter("Admitted2"));
-	int enrolled1 = Integer.parseInt(request.getParameter("Enrolled1"));
-	int enrolled2 = Integer.parseInt(request.getParameter("Enrolled2"));
-	int acadScale1 = Integer.parseInt(request.getParameter("AcadScale1"));
-	int acadScale2 = Integer.parseInt(request.getParameter("AcadScale2"));
-	int socScale1 = Integer.parseInt(request.getParameter("SocScale1"));
-	int socScale2 = Integer.parseInt(request.getParameter("SocScale2"));
-	int qualScale1 = Integer.parseInt(request.getParameter("QualScale1"));
-	int qualScale2 = Integer.parseInt(request.getParameter("QualScale2"));
 	
+	int students1=0;
+	int students2=0;
+	int femPerc1=0;
+	int femPerc2=0;
+	int satV1=0;
+	int satV2=0;
+	int satM1=0;
+	int satM2=0;
+	int cost1=0;
+	int cost2=0;
+	int finAidPerc1=0;
+	int finAidPerc2=0;
+	int applicants1=0;
+	int applicants2=0;
+	int admitted1=0;
+	int admitted2=0;
+	int enrolled1=0;
+	int enrolled2=0;
+	int acadScale1=0;
+	int acadScale2=0;
+	int socScale1=0;
+	int socScale2=0;
+	int qualScale1=0;
+	int qualScale2=0;
+	//set the inputs from the user
+	try{
+		students1 = Integer.parseInt(request.getParameter("Students1"));
+		students2 = Integer.parseInt(request.getParameter("Students2"));
+	    femPerc1 = Integer.parseInt(request.getParameter("FemPerc1"));
+		femPerc2 = Integer.parseInt(request.getParameter("FemPerc2"));
+		satV1 = Integer.parseInt(request.getParameter("SatV1"));
+		satV2 = Integer.parseInt(request.getParameter("SatV2"));
+		satM1 = Integer.parseInt(request.getParameter("SatM1"));
+		satM2 = Integer.parseInt(request.getParameter("SatM2"));
+		cost1 = Integer.parseInt(request.getParameter("Cost1"));
+		cost2 = Integer.parseInt(request.getParameter("Cost2"));
+		finAidPerc1 = Integer.parseInt(request.getParameter("FinAidPerc1"));
+		finAidPerc2 = Integer.parseInt(request.getParameter("FinAidPerc2"));
+		applicants1 = Integer.parseInt(request.getParameter("Applicants1"));
+		applicants2 = Integer.parseInt(request.getParameter("Applicants2"));
+		admitted1 = Integer.parseInt(request.getParameter("Admitted1"));
+		admitted2 = Integer.parseInt(request.getParameter("Admitted2"));
+		enrolled1 = Integer.parseInt(request.getParameter("Enrolled1"));
+		enrolled2 = Integer.parseInt(request.getParameter("Enrolled2"));
+		acadScale1 = Integer.parseInt(request.getParameter("AcadScale1"));
+		acadScale2 = Integer.parseInt(request.getParameter("AcadScale2"));
+		socScale1 = Integer.parseInt(request.getParameter("SocScale1"));
+		socScale2 = Integer.parseInt(request.getParameter("SocScale2"));
+		qualScale1 = Integer.parseInt(request.getParameter("QualScale1"));
+		qualScale2 = Integer.parseInt(request.getParameter("QualScale2"));
+	}
+	catch(NumberFormatException nfe){
+		response.sendRedirect("SearchMenu.jsp?Error=-6");
+	}
 	//get the emphases set
 	ArrayList<String> emphases = new ArrayList<String>();
 	if(request.getParameter("Emphases1").length()!=0){
