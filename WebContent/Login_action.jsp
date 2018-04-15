@@ -17,9 +17,9 @@
 	else if(loginStatus==6){
 		response.sendRedirect("Login.jsp?Error=-4");
 	}
-	else if(loginStatus==7){
-		response.sendRedirect("Login.jsp?Error=-5");
-	}
+// 	else if(loginStatus==7){
+// 		response.sendRedirect("Login.jsp?Error=-5");
+// 	}
 	else if(loginStatus==1){
 		session.setAttribute("AdminController", new AdminFuncController(username));
 		response.sendRedirect("AdminHomepage.jsp");
