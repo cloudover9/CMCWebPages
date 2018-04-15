@@ -205,6 +205,7 @@ public class DBController
    * removes a school from a user's saved school list
    * @param gu the GeneralUser who wishes to remove a saved school 
    * @param univ University to be removed
+   * @return an int value indicating where the removal was successful
    */
   public int removeSchoolFromSavedSchoolList(GeneralUser gu, University univ)
   {
