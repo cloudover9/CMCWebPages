@@ -12,6 +12,26 @@
 
 <body>
 <form method="post" action="EditUniversity_action.jsp" name="EditUniversity">
+
+<%
+String anyErrors = request.getParameter("Error");
+if(anyErrors!=null && anyErrors.equals("-1")){
+	out.println("The University does not exist in the database.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-2")){ // if the state is empty, which is checked in the Controller
+	out.println("One or more of the fields are empty.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-3")){
+	out.println("Either the location or control fields have invalid inputs.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-4")){
+	out.println("<One or more of the fields are out of range.br>");
+}
+if(anyErrors!=null && anyErrors.equals("-5")){
+	out.println("<One or more of the fields are empty.br>");
+}
+%>
+
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
   <tbody>
     <tr>

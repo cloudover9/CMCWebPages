@@ -16,10 +16,19 @@ Search Menu<br>
 <%
 	String anyErrors = request.getParameter("Error");
 	if(anyErrors!=null && anyErrors.equals("-1")){
-		out.println("YOU'RE TRYING TO GET IN COLLEGE MORON! FILL OUT THE FORMS!<br>");
+		out.println("One or more of the fields are empty. Please fill out the forms.<br>");
 	}
 	if(anyErrors!=null && anyErrors.equals("-2")){
-		out.println("The ranges of some inputs are out of bounds. Make sure no inputs are negative.<br>");
+		out.println("The low fields are negative.<br>");
+	}
+	if(anyErrors!=null && anyErrors.equals("-3")){
+		out.println("The high fields are less than the low fields.<br>");
+	}
+	if(anyErrors!=null && anyErrors.equals("-4")){
+		out.println("The high fields are greater than their assigned limit.<br>");
+	}
+	if(anyErrors!=null && anyErrors.equals("-5")){
+		out.println("NO MATCHES FOUND.<br>");
 	}
 %>
   <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
@@ -68,19 +77,19 @@ Search Menu<br>
       <tr>
         <td style="vertical-align: top;">by % FEMALE (0-100)<br>
         </td>
-        <td style="vertical-align: top;">between <input name="FemPerc1"value="0"> and <input name="FemPerc2" value="99999"><br>
+        <td style="vertical-align: top;">between <input name="FemPerc1"value="0"> and <input name="FemPerc2" value="100"><br>
         </td>
       </tr>
       <tr>
         <td style="vertical-align: top;">by SAT VERBAL (0-800)<br>
         </td>
-        <td style="vertical-align: top;">between <input name="SatV1"value="0"> and <input name="SatV2" value="99999"><br>
+        <td style="vertical-align: top;">between <input name="SatV1"value="0"> and <input name="SatV2" value="800"><br>
         </td>
       </tr>
       <tr>
         <td style="vertical-align: top;">by SAT MATH (0-800)<br>
         </td>
-        <td style="vertical-align: top;">between <input name="SatM1"value="0"> and <input name="SatM2" value="99999"><br>
+        <td style="vertical-align: top;">between <input name="SatM1"value="0"> and <input name="SatM2" value="800"><br>
         </td>
       </tr>
       <tr>
@@ -91,7 +100,7 @@ Search Menu<br>
       <tr>
         <td style="vertical-align: top;">by % FINANCIAL AID (0-100)<br>
         </td>
-        <td style="vertical-align: top;">between <input name="FinAidPerc1"value="0"> and <input name="FinAidPerc2" value="99999"><br>
+        <td style="vertical-align: top;">between <input name="FinAidPerc1"value="0"> and <input name="FinAidPerc2" value="100"><br>
         </td>
       </tr>
       <tr>
@@ -103,29 +112,29 @@ Search Menu<br>
       <tr>
         <td style="vertical-align: top;">by % ADMITTED (0-100)<br>
         </td>
-        <td style="vertical-align: top;">between <input name="Admitted1"value="0"> and <input name="Admitted2" value="99999"><br>
+        <td style="vertical-align: top;">between <input name="Admitted1"value="0"> and <input name="Admitted2" value="100"><br>
         </td>
       </tr>
       <tr>
         <td style="vertical-align: top;">by % ENROLLED (0-100)<br>
         </td>
-        <td style="vertical-align: top;">between <input name="Enrolled1"value="0"> and <input name="Enrolled2" value="99999"><br>
+        <td style="vertical-align: top;">between <input name="Enrolled1"value="0"> and <input name="Enrolled2" value="100"><br>
         </td>
       </tr>
       <tr>
         <td style="vertical-align: top;">by ACADEMIC SCALE (1-5)<br>
         </td>
-        <td style="vertical-align: top;">between  <input name="AcadScale1"value="0"> and <input name="AcadScale2" value="99999"><br>
+        <td style="vertical-align: top;">between  <input name="AcadScale1"value="1"> and <input name="AcadScale2" value="5"><br>
         </td>
       </tr>
       <tr>
         <td style="vertical-align: top;">by SOCIAL SCALE (1-5)</td>
-        <td style="vertical-align: top;">between <input name="SocScale1"value="0"> and <input name="SocScale2" value="99999"><br>
+        <td style="vertical-align: top;">between <input name="SocScale1"value="1"> and <input name="SocScale2" value="5"><br>
         </td>
       </tr>
       <tr>
         <td style="vertical-align: top;">by QUALITY OF LIFE SCALE (1-5)</td>
-        <td style="vertical-align: top;">between <input name="QualScale1"value="0"> and <input name="QualScale2" value="99999"><br>
+        <td style="vertical-align: top;">between <input name="QualScale1"value="1"> and <input name="QualScale2" value="5"><br>
         </td>
       </tr>
       <tr>

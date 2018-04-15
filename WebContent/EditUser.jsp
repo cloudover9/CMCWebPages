@@ -11,6 +11,20 @@
 
 <body>
 <form method="post" action="EditUser_action.jsp" name="EditUser">
+
+<%
+String anyErrors = request.getParameter("Error");
+if(anyErrors!=null && anyErrors.equals("-1")){
+	out.println("The first name is empty.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-2")){
+	out.println("The last name is empty.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-3")){
+	out.println("The password is empty.<br>");
+}
+%>
+
   <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>
