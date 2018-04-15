@@ -224,117 +224,141 @@ public class AdminFuncController {
 	 * @param socScale
 	 * @param qualScale
 	 * @param emphases
+	 * 
+	 * @return 0 the university has been edited
+	 * @return -1 the university does not exist in the database
+	 * @return -2 one or more of the fields are empty
+	 * @return -3 either the location or control are not valid inputs
+	 * @return -4 one or more of the fields are out of range
 	 */
-	public void editUniversity(String univName, String state, String location, String control, int students,
+	public int editUniversity(String univName, String state, String location, String control, int students,
 			int femPerc, int satv, int satm, int cost, int finAidPerc, int applicants, int admitted, int enrolled,
 			int acadScale, int socScale, int qualScale, ArrayList<String> emphases) {
 
 		// ========================= Fail check: the university does not exist in the
 		// database =======================
 		if (!(this.getUniversity(univName) instanceof University)) {
-			//System.out.println("*** University " + univName + " does not exist in the database ***");
-			throw new IllegalArgumentException();
+			//throw new IllegalArgumentException("*** University " + univName + " does not exist in the database ***");
+			return -1;
 		}
 		University u = this.getUniversity(univName);
 		// ============================ Fail checks: check if all field inputs are
 		// correct ===========================
 		// state must be a string
 		if (state.length() == 0) {
-			throw new IllegalArgumentException("Error: The state is empty.");
+			//throw new IllegalArgumentException("Error: The state is empty.");
+			return -2;
 		}
 		u.setState(state);
 		// location can be {SUBURBAN, URBAN, SMALL-CITY, -1(unknown/blank)}
 		if (location.length() == 0) {
 			u.setLocation("-1");
-		} else if (!location.equals("SUBURBAN") && !location.equals("URBAN") && !location.equals("SMALL-CITY")&& !location.equals("-1")) {
-			throw new IllegalArgumentException(
-					"Error: The location must be SUBURBAN, URBAN, or SMALL-CITY. It can be left empty if unknown.");
-		} else {
+		} 
+		else if (!location.equals("SUBURBAN") && !location.equals("URBAN") && !location.equals("SMALL-CITY")&& !location.equals("-1")) {
+			//throw new IllegalArgumentException("Error: The location must be SUBURBAN, URBAN, or SMALL-CITY. It can be left empty if unknown.");
+			return -3;
+		} 
+		else {
 			u.setLocation(location);
 		}
 		// control can be {PRIVATE, STATE, CITY, -1(unknown/blank)}
 		if (control.length() == 0) {
 			u.setControl("-1");
-		} else if (!control.equals("PRIVATE") && !control.equals("STATE") && !control.equals("CITY")&& !control.equals("-1")) {
-			throw new IllegalArgumentException(
-					"Error: The control must be PRIVATE, STATE, or CITY. It can be left empty if unknown.");
-		} else {
+		} 
+		else if (!control.equals("PRIVATE") && !control.equals("STATE") && !control.equals("CITY")&& !control.equals("-1")) {
+			//throw new IllegalArgumentException("Error: The control must be PRIVATE, STATE, or CITY. It can be left empty if unknown.");
+			return -3;
+		} 
+		else {
 			u.setControl(control);
 		}
 		// students must be an integer; cannot be negative
 		if (students < 0) {
-			throw new IllegalArgumentException("Error: The number of students is not in range.");
+			//throw new IllegalArgumentException("Error: The number of students is not in range.");
+			return -4;
 		}
 		u.setStudents(students);
 		// femPerc must be an integer between 0 and 100
 		if (femPerc < 0 || femPerc > 100) {
-			throw new IllegalArgumentException("Error: The female percentage must be between 0 and 100.");
+			//throw new IllegalArgumentException("Error: The female percentage must be between 0 and 100.");
+			return -4;
 		}
 		u.setFemPerc(femPerc);
 		// SATV must be between 0 and 800
 		if (satv < 0 || satv > 800) {
 			
-			throw new IllegalArgumentException("Error: The SAT verbal score must be between 0 and 800.");
+			//throw new IllegalArgumentException("Error: The SAT verbal score must be between 0 and 800.");
+			return -4;
 		}
 		u.setSatV(satv);
 		// SATM must be between 0 and 800
 		if (satm < 0 || satm > 800) {
 			
-			throw new IllegalArgumentException("Error: The SAT math score must be between 0 and 800");
+			//throw new IllegalArgumentException("Error: The SAT math score must be between 0 and 800");
+			return -4;
 		}
 		u.setSatM(satm);
 		// cost must be an integer; cannot be negative
 		if (cost < 0) {
 			
-			throw new IllegalArgumentException("Error: The cost is not in range.");
+			//throw new IllegalArgumentException("Error: The cost is not in range.");
+			return -4;
 		}
 		u.setCost(cost);
 		// financial aid must be between 0 and 100
 		if (finAidPerc < 0 || finAidPerc > 100) {
 			
-			throw new IllegalArgumentException("Error: The financial aid percentage must be between 0 and 100.");
+			//throw new IllegalArgumentException("Error: The financial aid percentage must be between 0 and 100.");
+			return -4;
 		}
 		u.setFinAidPerc(finAidPerc);
 		// applicants must be an integer; cannot be negative
 		if (applicants < 0) {
 			
-			throw new IllegalArgumentException("Error: The number of applicants is not in range.");
+			//throw new IllegalArgumentException("Error: The number of applicants is not in range.");
+			return -4;
 		}
 		u.setApplicants(applicants);
 		// admitted must be between 0 and 100
 		if (admitted < 0 || admitted > 100) {
 			
-			throw new IllegalArgumentException("Error: The admitted percentage is not in range.");
+			//throw new IllegalArgumentException("Error: The admitted percentage is not in range.");
+			return -4;
 		}
 		u.setAdmitted(admitted);
 		// enrolled must be between 0 and 100
 		if (enrolled < 0 || enrolled > 100) {
 			
-			throw new IllegalArgumentException("Error: The enrolled percentage is not in range.");
+			//throw new IllegalArgumentException("Error: The enrolled percentage is not in range.");
+			return -4;
 		}
 		u.setEnrolled(enrolled);
 		// acadScale must be between 1 and 5
 		if (acadScale < 1 || acadScale > 5) {
 			
-			throw new IllegalArgumentException("Error: The academic scale must be between 1 and 5");
+			//throw new IllegalArgumentException("Error: The academic scale must be between 1 and 5");
+			return -4;
 		}
 		u.setAcadScale(acadScale);
 		// socScale must be between 1 and 5
 		if (socScale < 1 || socScale > 5) {
 			
-			throw new IllegalArgumentException("Error: The social scale must be between 1 and 5.");
+			//throw new IllegalArgumentException("Error: The social scale must be between 1 and 5.");
+			return -4;
 		}
 		u.setSocScale(socScale);
 		// qualScale must be between 1 and 5
 		if (qualScale < 1 || qualScale > 5) {
 			
-			throw new IllegalArgumentException("Error: The quality scale must be between 1 and 5.");
+			//throw new IllegalArgumentException("Error: The quality scale must be between 1 and 5.");
+			return -4;
 		}
 		u.setQualScale(qualScale);
 		// number of emphasis is limited to 5
 		if (emphases.size() > 5) { // almost never be true due to GUI but just in case for testing
 			
-			throw new IllegalArgumentException("Error: The number of emphases is over 5.");
+			//throw new IllegalArgumentException("Error: The number of emphases is over 5.");
+			return -4;
 		}
 		// replaces u's emphases
 		u.removeAllEmphases(); // remove all the emphases (not in database)
@@ -342,6 +366,7 @@ public class AdminFuncController {
 			u.addEmphases(emphasis);
 		}
 		saveUnivChanges(u); // save university changes in database
+		return 0;
 	}
 
 	/**
@@ -394,12 +419,12 @@ public class AdminFuncController {
 	 * @param lastName
 	 * @param acType
 	 */
-	public void addAccount(String userName, String password, String firstName, String lastName, String acType) {
+	public int addAccount(String userName, String password, String firstName, String lastName, String acType) {
 		
 		ArrayList<String> information = new ArrayList<String>();
 		if (!(dbc.getUser(userName).getUsername().equals("DummyUser")))
 		{
-			throw new IllegalArgumentException();
+			return -1;
 		}
 		information.add(userName);
 		information.add(password);
@@ -412,13 +437,15 @@ public class AdminFuncController {
 			Admin ad = new Admin(information.get(0), information.get(1), information.get(2).charAt(0),
 					information.get(3), information.get(4));
 			dbc.addAccount(ad);
+			return 0;
 		} else if (type.charAt(0) == 'u') {
 			// new GeneralUser(firstName, lastName, active, username, password, arrayList)
 			GeneralUser gu = new GeneralUser(information.get(3), information.get(4), information.get(2).charAt(0),
 					information.get(0), information.get(1), new ArrayList<String>());
 			dbc.addAccount(gu);
+			return 0;
 		} else {
-			throw new IllegalArgumentException("ERROR: Invalid Input; " + "The input needs to be either 'u' or 'a'");
+			return -2;
 			
 		}
 		
@@ -434,14 +461,24 @@ public class AdminFuncController {
 	 * @param status
 	 * @param type
 	 */
-	public void editUser(Account user, String firstName, String lastName, String password, char status, char type) {
-		Account account = this.getAccount(user.getUsername());		
+	public int editUser(Account user, String firstName, String lastName, String password, char status, char type) {
+		Account account = this.getAccount(user.getUsername());	
+		if(firstName.length()==0) {
+			return -1;
+		}
 		account.setFirstName(firstName);
+		if(lastName.length()==0) {
+			return -2;
+		}
 		account.setLastName(lastName);
+		if(password.length()==0) {
+			return -3;
+		}
 		account.setPassword(password);
 		account.setType(type);
 		account.setActive(status);
 		this.saveAccountChanges(account);
+		return 0;
 	}
 
 	/**

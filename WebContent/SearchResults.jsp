@@ -73,12 +73,37 @@
 		emphases.add(request.getParameter("Emphases5"));
 	}
 	
+	//CHECK FOR ERRORS, RETURN NULL IF THERE IS AN ERROR
+	  // the low variables are negative
+	  if(students1<0 || femPerc1<0 || satV1<0 || satM1<0 || cost1<0 || finAidPerc1<0 || applicants1<0 || admitted1<0 || enrolled1<0
+			  || acadScale1<1 || socScale1<1 || qualScale1<1) {
+		  response.sendRedirect("SearchMenu.jsp?Error=-2");
+	  }
+	  // the high variables are less than the low variables
+	  if(students2<students1 || femPerc2<femPerc1 || satV2<satV1 || satM2<satM1 || cost2<cost1 || finAidPerc2<finAidPerc1
+			  || applicants2<applicants1 || admitted2<admitted1 || enrolled2<enrolled1 || acadScale2<acadScale1 ||
+			  socScale2<socScale1 || qualScale2<qualScale1) {
+		  response.sendRedirect("SearchMenu.jsp?Error=-3");
+	  }
+	  // the high variables are greater than their assigned limit
+	  if( femPerc2>100 || satV2>800 || satM2>800 || finAidPerc2>100
+			  || admitted2>100 || enrolled2>100 || acadScale2>5 ||
+			  socScale2>5 || qualScale2>5) {
+		  response.sendRedirect("SearchMenu.jsp?Error=-4");
+	  }
+	
 	//search based on inputs
 	ArrayList<University> searchedUniversities = sc.search(schoolName, state, location, control, 
 			students1, students2, 
 			femPerc1, femPerc2, satV1, satV2, satM1, satM2, cost1, cost2, finAidPerc1, finAidPerc2, 
 			applicants1, applicants2, admitted1, admitted2, enrolled1, enrolled2, acadScale1, acadScale2, 
 			socScale1, socScale2, qualScale1, qualScale2, emphases);
+	
+	// no matches found
+	if(searchedUniversities==null || searchedUniversities.isEmpty()){
+		response.sendRedirect("SearchMenu.jsp?Error=-5");
+		return;
+	}
 %>
 <body>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">

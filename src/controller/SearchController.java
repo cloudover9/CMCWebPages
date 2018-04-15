@@ -58,12 +58,6 @@ public class SearchController{
                                       int socLifeScaleHigh, int qualLifeScaleLow, int qualLifeScaleHigh, 
                                       ArrayList<String> emphases){
 	  
-	  //CHECK FOR ERRORS, RETURN NULL IF THERE IS AN ERROR
-	  if(studentsLow<0 || femPercLow<0 || satVLow<0) {
-		  
-	  }
-	  
-	  
     ArrayList<University> rlist = new ArrayList<University>();
     ArrayList<University> sort = new ArrayList<University>();
     boolean n=false, s=false, l=false, c=false, ns=false, pf=false, sv=false, sm=false, exp=false, pfa=false, na=false, 

@@ -11,6 +11,7 @@
 
 String anyErrors = request.getParameter("Error");
 if(anyErrors!=null && anyErrors.equals("-1")){
+
 	out.println("Sorry, you must submit log in credentials!<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-2")){
@@ -25,6 +26,7 @@ if(anyErrors!=null && anyErrors.equals("-4")){
 
 if(anyErrors!=null && anyErrors.equals("-5")){
 	out.println("Sorry your username is incorrect! Please log in again! >:c<br>");
+
 }
 %>
 
