@@ -5,6 +5,8 @@
 </head> <br><br>
 
 <body>
+<%@include file= "TranslateFeature.jsp" %>
+
 <a href="SearchMenu.jsp" target="_self">Search for Schools</a> <br>
 
 <a href="ManageSavedSchools.jsp" target="_self">Manage My Saved Schools</a><br>
