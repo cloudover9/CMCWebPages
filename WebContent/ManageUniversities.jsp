@@ -1,4 +1,5 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
+<%@include file= "TranslateFeature.jsp" %>
 <%
 	AdminFuncController afc = (AdminFuncController)session.getAttribute("AdminController");
 	ArrayList<University> allUnivs = afc.getAllUniversities();

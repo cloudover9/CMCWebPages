@@ -1,5 +1,5 @@
 <html>
-
+<%@include file= "TranslateFeature.jsp" %>
 <head>
 <title>AddUniversity</title>
 </head>

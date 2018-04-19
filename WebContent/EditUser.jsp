@@ -1,4 +1,5 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
+<%@include file= "TranslateFeature.jsp" %>
 <%
 	UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
 	GeneralUser gu = ufc.getCurrentGeneralUser();

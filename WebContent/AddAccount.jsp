@@ -1,7 +1,7 @@
 <html><head>
-    <title>AddAccount</title>
+<title>AddAccount</title>
 
-  
+<%@include file= "TranslateFeature.jsp" %>
 </head><body>
 <form method="post" action="AddAccount_action.jsp" name="AddAccount">
 
