@@ -30,8 +30,12 @@ if(anyErrors!=null && anyErrors.equals("-4")){
 // }
 %>
 
+<img src="${pageContext.request.contextPath}/images/logo.jpg"class= "center" style="width:500px;height:600px;" >
+
   <table style="text-align: left; width: 200px; height: 266px; background-color: white; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
     <caption>Welcome to the CMC System!<br></caption> 
+    
+</style>
     <tbody>
       <tr>
         <td style="vertical-align: middle; text-align: center;">Username<br>
