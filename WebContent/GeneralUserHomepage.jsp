@@ -1,7 +1,8 @@
+<%@include file="verifyLogin.jsp"%>
 <html>
 
-<head>  
-</head>
+<head >   HOMEPAGE
+</head> <br><br>
 
 <body>
 <a href="SearchMenu.jsp" target="_self">Search for Schools</a> <br>

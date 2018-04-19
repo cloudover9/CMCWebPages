@@ -25,8 +25,10 @@ if(anyErrors!=null && anyErrors.equals("-4")){
 }
 
 if(anyErrors!=null && anyErrors.equals("-5")){
-	out.println("Sorry your username is incorrect! Please log in again! >:c<br>");
-
+	out.println("Sorry your username is incorrect! Please log in again!<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-6")){
+	out.println("You need to log in first!<br>");
 }
 %>
 

@@ -1,4 +1,5 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
+<%@include file="verifyLogin.jsp"%>
 <%
 	AdminFuncController afc = (AdminFuncController)session.getAttribute("AdminController");
 	ArrayList<String> emphases = new ArrayList<String>();

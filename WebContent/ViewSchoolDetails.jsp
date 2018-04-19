@@ -1,4 +1,5 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
+<%@include file="verifyLogin.jsp"%>
 <html>
 <head>
 </head>
