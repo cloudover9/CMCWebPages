@@ -7,6 +7,7 @@
 <body>
 <form action="Login_action.jsp" method="post" name="Login">
 
+<%@include file= "TranslateFeature.jsp" %>
 <%
 
 String anyErrors = request.getParameter("Error");

@@ -1,4 +1,5 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
+<%@include file= "TranslateFeature.jsp" %>
 <html>
 <head>
 </head>

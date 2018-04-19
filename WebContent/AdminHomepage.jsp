@@ -1,4 +1,5 @@
 <html>
+<%@include file= "TranslateFeature.jsp" %>
 
 <head>
 </head>
