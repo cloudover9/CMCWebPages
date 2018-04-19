@@ -1,3 +1,4 @@
+<%@include file="verifyLogin.jsp"%>
 <html><head>
 <title>AddAccount</title>
 

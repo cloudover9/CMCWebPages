@@ -3,6 +3,7 @@
 	String username = request.getParameter("Username");
 	String password = request.getParameter("Password");
 	AccountController acc = new AccountController();
+	session.setAttribute("AccountController", acc);
 	int loginStatus = acc.login(username, password);
 	
 	if(loginStatus==3){

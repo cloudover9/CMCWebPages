@@ -365,23 +365,24 @@ public class AdminFuncController {
 	 * @param qualScale
 	 * @param emphases
 	 */
-	public void addUniversity(String schoolName, String state, String location, String control, int students,
+	public int addUniversity(String schoolName, String state, String location, String control, int students,
 			int femPerc, int satV, int satM, int cost, int finAidPerc, int applicants, int admitted, int enrolled,
 			int acadScale, int socScale, int qualScale, ArrayList<String> emphases) {
 		// Fail: user entered a blank name for university
-		if (schoolName.equals("")) {;
-			throw new IllegalArgumentException("*** Error: University name is blank. Please enter a university name. ***");
+		if (schoolName.equals("")) {
+			//throw new IllegalArgumentException("*** Error: University name is blank. Please enter a university name. ***");
+		return -2;
 		}
-		// Fail: university already exists in database
-		else if (this.getUniversity(schoolName) != null) {;
-			throw new IllegalArgumentException("Error: This university name already exists, please choose a different one");
-		}
+//		// Fail: university already exists in database
+//		else if (this.getUniversity(schoolName) != null) {;
+//			throw new IllegalArgumentException("Error: This university name already exists, please choose a different one");
+//		}
 
 		University u = new University(schoolName, state, location, control, students, femPerc, satV, satM, cost,
 				finAidPerc, applicants, admitted, enrolled, acadScale, socScale, qualScale, emphases);
-		dbc.addNewUniversity(u); // add the university to the database
+		int i = dbc.addNewUniversity(u); // add the university to the database
 		addEmphases(u);
-		
+		return i;
 	}
 
 
