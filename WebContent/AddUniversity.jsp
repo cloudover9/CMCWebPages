@@ -7,6 +7,15 @@
 
 <body>
 <form method="post" action="AddUniversity_action.jsp" name="AddUniversity">
+<%
+String anyErrors = request.getParameter("Error");
+if(anyErrors!=null && anyErrors.equals("1")){
+	out.println("the school name already exists. Choose a different one.<br>");
+}
+if(anyErrors!=null && anyErrors.equals("2")){
+	out.println("School name can not be empty.<br>");
+}
+%>
 	<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
 		<tbody>
 	    	<tr>

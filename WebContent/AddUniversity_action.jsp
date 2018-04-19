@@ -18,7 +18,7 @@
 	if(request.getParameter("Emphasis5").length()!=0){
 		emphases.add(request.getParameter("Emphasis5"));
 	}
-	afc.addUniversity(request.getParameter("SchoolName"), request.getParameter("State"), request.getParameter("Location"), 
+	int i = afc.addUniversity(request.getParameter("SchoolName"), request.getParameter("State"), request.getParameter("Location"), 
 			request.getParameter("Control"), Integer.parseInt(request.getParameter("Students")),
 			Integer.parseInt(request.getParameter("FemPerc")), Integer.parseInt(request.getParameter("SatV")), 
 			Integer.parseInt(request.getParameter("SatM")), Integer.parseInt(request.getParameter("Cost")), 
@@ -26,5 +26,16 @@
 			Integer.parseInt(request.getParameter("Admitted")), Integer.parseInt(request.getParameter("Enrolled")),
 			Integer.parseInt(request.getParameter("AcadScale")), Integer.parseInt(request.getParameter("SocScale")), 
 			Integer.parseInt(request.getParameter("QualScale")), emphases);
-	response.sendRedirect("AdminHomepage.jsp");
-%>
+	
+	if (i == -1){
+		response.sendRedirect("AddUniversity.jsp?Error=1");
+	}
+	else if (i == -2){
+		response.sendRedirect("AddUniversity.jsp?Error=2");
+	}
+	else
+	{
+		response.sendRedirect("AdminHomepage.jsp");
+	}
+	 
+%> 
