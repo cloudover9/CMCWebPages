@@ -26,6 +26,16 @@ public class AccountController {
 	public AccountController() {
 		loginStatus = false;
 	}
+	
+	/**
+	 * checks if the user is logged in
+	 * @return true the user is logged in
+	 * @return false the user is not logged in
+	 */
+	public boolean isLoggedIn() {
+		return loginStatus;
+	}
+	
 	/**
 	 * Log in method takes username and password and return true or false, if the
 	 * information belongs to an account If the credentials that are added are
@@ -49,23 +59,28 @@ public class AccountController {
 		
 		// fields are empty
 		if (username.equals("") || password.equals("")) {
+			this.loginStatus = false;
 			return 3;
 		}
 		// both filled, user does not exist
 		else if (matchedUser.getUsername().equals("DummyUser")) {
+			this.loginStatus = false;
 			return 4;
 		}
 		// both filled, password incorrect
 		else if (!matchedUser.getPassword().equals(password) && matchedUser.getUsername().equals(username)) {
+			this.loginStatus = false;
 			return 5;
 		}
 		// user is deactivated
 		else if (matchedUser.getActive() == 'N') {
+			this.loginStatus = false;
 			return 6;
 		}
 		
 		// user's username is incorrect
 		else if (!matchedUser.getUsername().equals(username) && matchedUser.getPassword().equals(password)) {
+			this.loginStatus = false;
 			return 7;
 		}
 		// works; both match and user is active

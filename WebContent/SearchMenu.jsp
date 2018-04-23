@@ -1,4 +1,6 @@
+<%@include file="verifyLogin.jsp"%>
 <html>
+<%@include file= "TranslateFeature.jsp" %>
 
 <head>
 <title>SearchMenu</title>
@@ -11,6 +13,8 @@
 Search Menu<br>
 </big></big>
 </div>
+
+
 
 <form method="post" action="SearchResults.jsp" name="SearchMenu">
 <%

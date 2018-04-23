@@ -3,15 +3,15 @@
 <head> 
   <title>Login</title>
 </head>
-
+<h1 style="background-color:Gray;text-align:center;" > <br><br> Welcome to the CMC System!<br><br><br></h1>
 <body>
 <form action="Login_action.jsp" method="post" name="Login">
 
+<%@include file= "TranslateFeature.jsp" %>
 <%
 
 String anyErrors = request.getParameter("Error");
 if(anyErrors!=null && anyErrors.equals("-1")){
-
 	out.println("Sorry, you must submit log in credentials!<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-2")){
@@ -23,15 +23,21 @@ if(anyErrors!=null && anyErrors.equals("-3")){
 if(anyErrors!=null && anyErrors.equals("-4")){
 	out.println("Sorry, your account is deactivated! >:c<br>");
 }
-
 if(anyErrors!=null && anyErrors.equals("-5")){
-	out.println("Sorry your username is incorrect! Please log in again! >:c<br>");
-
+	out.println("Sorry your username is incorrect! Please log in again!<br>");
+}
+if(anyErrors!=null && anyErrors.equals("-6")){
+	out.println("You need to log in first!<br>");
 }
 %>
 
+<img src="${pageContext.request.contextPath}/images/logo.jpg"class= "center" style="width:500px;height:600px;" >
+
   <table style="text-align: left; width: 200px; height: 266px; background-color: white; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+
     <caption>Welcome to the CMC System!<br></caption> 
+   
+    <caption><br></caption> 
     <tbody>
       <tr>
         <td style="vertical-align: middle; text-align: center;">Username<br>
