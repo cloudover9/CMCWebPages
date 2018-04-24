@@ -3,9 +3,11 @@
 <head> 
   <title>Login</title>
 </head>
-<h1 style="background-color:Gray;text-align:center;" > <br><br> Welcome to the CMC System!<br><br><br></h1>
-<body >
 
+<img src="${pageContext.request.contextPath}/images/logo.jpg" alt = "Home" class= "center" style="float:left;width:150px;height:150px;" >
+<h1 style="background-color:Gray;text-align:center;" > <br><br> Welcome to the CMC System!<br><br><br>
+</h1>
+<body>
 
 <form action="Login_action.jsp" method="post" name="Login">
 
@@ -33,7 +35,7 @@ if(anyErrors!=null && anyErrors.equals("-6")){
 }
 %>
 
-<img src="${pageContext.request.contextPath}/images/logo.jpg"class= "center" style="width:500px;height:600px;" >
+
 
   <table style="text-align: left; width: 200px; height: 266px; background-color: white ; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
 

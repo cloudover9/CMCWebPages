@@ -3,8 +3,10 @@
 <%@include file= "TranslateFeature.jsp" %>
 <html>
 <head>
+<%@include file= "GeneralUserMenu.jsp" %>
   <title>SearchResults</title>
 </head>
+
 <%
 	//set up the controllers
 	UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 

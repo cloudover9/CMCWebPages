@@ -1,8 +1,9 @@
 <%@include file="verifyLogin.jsp"%>
-
+<%@include file= "TranslateFeature.jsp" %>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -34,6 +35,7 @@ body {font-family: "Helvetica", sans-serif;}
     text-align: center;
 }
 
+
 #Search {background-color:red;}
 #ManageSchool {background-color:green;}
 #ManageP {background-color:blue;}
@@ -41,6 +43,15 @@ body {font-family: "Helvetica", sans-serif;}
 </style>
 </head>
 <body>
+
+
+<%@include file= "GeneralUserMenu.jsp" %>
+
+
+<div id="main">
+
+  
+</div>
 
 <p>Click on the buttons inside the tabbed menu:</p>
 
@@ -51,7 +62,7 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="ManageSchool" class="tabcontent">
   <h3>Manage Saved Schools </h3>
-  <a href="ManageSavedSchools.jsp" target="_self">Manage My Saved Schools</a>
+  <a href="ManageSavedSchools2.jsp" target="_self">Manage My Saved Schools</a>
   
 </div>
 
@@ -61,10 +72,13 @@ body {font-family: "Helvetica", sans-serif;}
   
 </div>
 
+
 <div id="Logout" class="tabcontent">
   <h3>Logout</h3>
-    <a href="" target="_self">Manage My Profile</a>
+    <a href="GeneralUserHomePage.jsp" target="_self">Logout </a>
 </div>
+
+
 
 <button class="tablink" onclick="openCity('Search', this, 'red')" id="defaultOpen">Search for A School</button>
   
