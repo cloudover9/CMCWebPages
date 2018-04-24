@@ -1,11 +1,65 @@
-<%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
-<%@include file="verifyLogin.jsp"%>
+<%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
+<%@include file= "TranslateFeature.jsp" %>
+<%@include file= "GeneralUserMenu.jsp" %>
+<br>
+<%
+UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
+GeneralUser gu = ufc.getCurrentGeneralUser();
+ArrayList<String> allSavedSchoolNames = gu.getSavedSchools();
+
+
+%>
 <head>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box}
 body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    height: 100%;
+}
 
 table {
     border-collapse: collapse;
@@ -19,11 +73,53 @@ th, td {
 
 tr:nth-child(even){background-color: #ddd}
 
+input[type=submit] {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #606060;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px
+}
 
+
+
+input[type=submit]:hover {
+    background-color: #606060;
+    color: white;
 </style>
+
+</head>
+<body>
+
+
+<div class="tab">
+<% 
+boolean first = true;
+  	for(int i=0; i<allSavedSchoolNames.size();i++){
+  		String schoolName = allSavedSchoolNames.get(i);
+  	%>
+
+
+  <button class="tablinks" onclick="openSchool(event, '<%out.print(schoolName);%>')"<%if(first) out.print("id="+"\"defaultOpen\"");%>><%out.println(schoolName);%></button>
+<%first = false; 
+}%>
+</div>
+
+<% 
+  	for(int i=0; i<allSavedSchoolNames.size();i++){
+  		String schoolName = allSavedSchoolNames.get(i);
+  	%>
+<div id="<%out.print(schoolName);%>" class="tabcontent">
+  <h3><%out.println(schoolName); %></h3>
 <%
-	UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
-	String schoolName = request.getParameter("SchoolName");
 	String state = ufc.getUniversity(schoolName).getState();
 	String location = ufc.getUniversity(schoolName).getLocation();
 	String control = ufc.getUniversity(schoolName).getControl();
@@ -41,7 +137,7 @@ tr:nth-child(even){background-color: #ddd}
 	int qualScale = ufc.getUniversity(schoolName).getQualScale();
 %>
 
-<body>
+
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
 
   <tbody>
@@ -150,8 +246,34 @@ tr:nth-child(even){background-color: #ddd}
     </tr>
   </tbody>
 </table>
-
+<form method="post" action="RemoveSavedSchool_action.jsp" name="RemoveSavedSchool">
+      		<input name="Remove" value="Remove" type="submit">
+      		<input name="SchoolName" value="<%=schoolName%>" type="hidden"><br>
+      </form>
+</div>
 <br>
+<%} %>
 
-<br>
-</body></html>
+
+
+<script>
+function openSchool(evt, schoolNAme) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(schoolNAme).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 

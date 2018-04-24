@@ -1,13 +1,66 @@
 <%@include file="verifyLogin.jsp"%>
 <html>
-<%@include file= "TranslateFeature.jsp" %>
 
+<%@include file= "TranslateFeature.jsp" %>
 <head>
+<%@include file= "GeneralUserMenu.jsp" %>
 <title>SearchMenu</title>
 </head>
 
 <body>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #ddd}
+
+input[type=submit] {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #606060;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px
+}
+input[type=submit]:hover {
+    background-color: #606060;
+    color: white;
+}
+    
+input[type=reset] {
+   background-color: white; 
+   color: black; 
+   border: 2px solid #606060;
+   padding: 4px 8px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   -webkit-transition-duration: 0.4s; 
+   transition-duration: 0.4s;
+   cursor: pointer;
+   border-radius: 4px
+}
+input[type=reset]:hover {
+    background-color: #606060;
+    color: white;
+    }   
+</style>
 <div style="text-align: right; font-weight: bold;">
 <big><big>
 Search Menu<br>
@@ -55,10 +108,10 @@ Search Menu<br>
         <td style="vertical-align: top;">by LOCATION</td>
         <td style="vertical-align: top;">
         <select name="Location">
+        <option value="">UNKNOWN</option>
         <option value="SUBURBAN">SUBURBAN</option>
         <option value="URBAN">URBAN</option>
         <option value="SMALL-CITY">SMALL-CITY</option>
-        <option value="">UNKNOWN</option>
         </select>
 <br>
         </td>
@@ -67,10 +120,10 @@ Search Menu<br>
         <td style="vertical-align: top;">by CONTROL</td>
         <td style="vertical-align: top;">
         <select name="Control">
+        <option value="">UNKNOWN</option>
         <option value="PRIVATE">PRIVATE</option>
         <option value="STATE">STATE</option>
         <option value="CITY">CITY</option>
-        <option value="">UNKNOWN</option>
         </select>
 <br>
         </td>

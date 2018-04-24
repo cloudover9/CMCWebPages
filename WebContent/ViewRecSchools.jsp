@@ -1,11 +1,46 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
 <%@include file="verifyLogin.jsp"%>
 <%@include file= "TranslateFeature.jsp" %>
+<%@include file= "GeneralUserMenu.jsp" %>
 
 <html>
 <head>
   <title>ViewRecSchools</title>
 </head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #ddd}
+
+input[type=submit] {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #606060;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px
+}
+input[type=submit]:hover {
+    background-color: #606060;
+    color: white;
+}
+    
+</style>
 <%
 	UserFuncController recUFC = (UserFuncController)session.getAttribute("UserController");
 	SearchController sc = new SearchController();
@@ -40,28 +75,28 @@ MAY WE ALSO RECOMMEND<br>
     		<tr>
       			<td style="vertical-align: top;">SCHOOL<br>
       			</td>
-      			<td style="vertical-align: top;"><input value="<%=univName%>" readonly="readonly" name="School"><br>
+      			<td style="vertical-align: top;"><%=univName%><br>
       			</td>
     		</tr>
     		<tr>
       			<td style="vertical-align: top;">STATE<br>
       			</td>
-      			<td style="vertical-align: top;"><input value="<%=stateRec%>" readonly="readonly" name="State"> </td>
+      			<td style="vertical-align: top;"><%=stateRec%></td>
     		</tr>
     		<tr>
       			<td style="vertical-align: top;">LOCATION<br>
       			</td>
-     			 <td style="vertical-align: top;"><input value="<%=locationRec%>" readonly="readonly" name="Location"> </td>
+     			 <td style="vertical-align: top;"><%=locationRec%> </td>
     		</tr>
     		<tr>
       			<td style="vertical-align: top;">CONTROL<br>
       			</td>
-      			<td style="vertical-align: top;"><input value="<%=controlRec%>" readonly="readonly" name="Control"> </td>
+      			<td style="vertical-align: top;"><%=controlRec%> </td>
     		</tr>
     		<tr>
       			<td style="vertical-align: top;">NUMBER OF STUDENTS<br>
       			</td>
-      			<td style="vertical-align: top;"><input value="<%=studentsRec%>" name="Students" readonly="readonly"> </td>
+      			<td style="vertical-align: top;"><%=studentsRec%> </td>
     		</tr>
     	</tbody>
 	</table>

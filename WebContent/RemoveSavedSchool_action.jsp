@@ -6,5 +6,5 @@
 	UserFuncController ufc = (UserFuncController)session.getAttribute("UserController");
 	String schoolName = request.getParameter("SchoolName");
 	ufc.removeSavedSchool(ufc.getUniversity(schoolName));
-	response.sendRedirect("ManageSavedSchools.jsp");
+	response.sendRedirect("ManageSavedSchools2.jsp");
 %>
