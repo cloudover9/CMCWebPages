@@ -68,29 +68,31 @@ th, td {
 tr:nth-child(even){background-color: #ddd}
 
 input[type=submit] {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #606060;
-    padding: 4px 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px
+  background-color: #cccccc; 
+   color: black; 
+   border: 2px solid #cccccc;
+   padding: 4px 8px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   -webkit-transition-duration: 0.4s; 
+   transition-duration: 0.4s;
+   cursor: pointer;
+   border-radius: 4px
 }
+
 input[type=submit]:hover {
-    background-color: #606060;
+background-color: #1a8cff;
     color: white;
 }
+
     
 input[type=reset] {
-   background-color: white; 
+  background-color: #cccccc; 
    color: black; 
-   border: 2px solid #606060;
+   border: 2px solid #cccccc;
    padding: 4px 8px;
    text-align: center;
    text-decoration: none;
@@ -103,9 +105,9 @@ input[type=reset] {
    border-radius: 4px
 }
 input[type=reset]:hover {
-    background-color: #606060;
+    background-color: #1a8cff;
     color: white;
-    }   
+    }    
 </style>
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>

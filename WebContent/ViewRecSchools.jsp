@@ -7,40 +7,7 @@
 <head>
   <title>ViewRecSchools</title>
 </head>
-<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even){background-color: #ddd}
-
-input[type=submit] {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #606060;
-    padding: 4px 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px
-}
-input[type=submit]:hover {
-    background-color: #606060;
-    color: white;
-}
-    
-</style>
 <%
 	UserFuncController recUFC = (UserFuncController)session.getAttribute("UserController");
 	SearchController sc = new SearchController();

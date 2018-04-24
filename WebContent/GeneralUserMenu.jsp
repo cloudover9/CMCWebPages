@@ -54,6 +54,59 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+input[type=submit] {
+  background-color: #cccccc; 
+   color: black; 
+   border: 2px solid #cccccc;
+   padding: 4px 8px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   -webkit-transition-duration: 0.4s; 
+   transition-duration: 0.4s;
+   cursor: pointer;
+   border-radius: 4px
+}
+
+input[type=submit]:hover {
+background-color: #1a8cff;
+    color: white;
+}
+
+    
+input[type=reset] {
+  background-color: #cccccc; 
+   color: black; 
+   border: 2px solid #cccccc;
+   padding: 4px 8px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   -webkit-transition-duration: 0.4s; 
+   transition-duration: 0.4s;
+   cursor: pointer;
+   border-radius: 4px
+}
+input[type=reset]:hover {
+    background-color: #1a8cff;
+    color: white;
+    }  
+    table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #ddd}
 </style>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 </head>
