@@ -1,6 +1,7 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
 <%@include file="verifyLogin.jsp"%>
 <%@include file= "TranslateFeature.jsp" %>
+<%@include file= "AdminMenu.jsp" %><br>
 <%
 	AdminFuncController afc = (AdminFuncController)session.getAttribute("AdminController");
 	String schoolName = request.getParameter("SchoolName");
