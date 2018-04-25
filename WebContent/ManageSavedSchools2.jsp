@@ -98,7 +98,7 @@ boolean first = true;
   		String schoolName = allSavedSchoolNames.get(i);
   	%>
 <div id="<%out.print(schoolName);%>" class="tabcontent">
-  <h3><%out.println(schoolName); %></h3>
+  <h2><%out.println(schoolName); %></h2>
 <%
 	String state = ufc.getUniversity(schoolName).getState();
 	String location = ufc.getUniversity(schoolName).getLocation();
@@ -121,11 +121,6 @@ boolean first = true;
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
 
   <tbody>
-    <tr>
-      <td style="vertical-align: top;">SCHOOL<br>
-      </td>
-      <td style="vertical-align: top;"> <%=schoolName%> </td>
-    </tr>
     <tr>
       <td style="vertical-align: top;">STATE<br>
       </td>
