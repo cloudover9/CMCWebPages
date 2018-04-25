@@ -3,6 +3,8 @@
 <%@include file= "TranslateFeature.jsp" %>
 <html>
 <head>
+<style>
+</style>
 </head>
 <%
 	UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 

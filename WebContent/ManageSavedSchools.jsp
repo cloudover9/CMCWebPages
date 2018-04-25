@@ -17,7 +17,7 @@ for(String s: allSavedSchoolNames){
 
 <body>
 
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 100%;" border="1" cellpadding="0" cellspacing="0">
 
   <tbody>
     <tr align="center">
@@ -26,11 +26,11 @@ for(String s: allSavedSchoolNames){
     </tr>
   
   	<tr>
-  		<td style="vertical-align: top;">Remove
+  		<td style="vertical-align: top; text-align: center;">Remove
 		</td>
 		<td style="vertical-align: top; text-align: center;">University Name
 		</td>
-		<td style="vertical-align: top;">View
+		<td style="vertical-align: top; text-align: center;">View
 		</td>
   	</tr>
   
@@ -39,7 +39,7 @@ for(String s: allSavedSchoolNames){
   		String schoolName = allSavedSchoolNames.get(i);
   	%>
     <tr>
-      <td style="vertical-align: top; width: 150px;">
+      <td style="vertical-align: top;  width: 70px;">
       <form method="post" action="RemoveSavedSchool_action.jsp" name="RemoveSavedSchool">
       		<input name="Remove" value="Remove" type="submit">
       		<input name="SchoolName" value="<%=schoolName%>" type="hidden"><br>
@@ -49,8 +49,8 @@ for(String s: allSavedSchoolNames){
       <td style="vertical-align: top;"><%=schoolName%>
       </td>
       
-      <td style="vertical-align: top; width: 150px;">
-      <form method="post" action="ViewSchoolDetails.jsp" name="ViewSchoolDetails">
+      <td style="vertical-align: top; width: 100px;">
+      <form method="post" action="ViewSchoolDetails2.jsp" name="ViewSchoolDetails">
       		<input name="View" value="View" type="submit">
       		<input name="SchoolName" value="<%=schoolName%>" type="hidden"><br>
       </form>
