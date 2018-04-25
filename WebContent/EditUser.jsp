@@ -8,10 +8,13 @@
 <html>
 
 <head>
+<%@include file= "GeneralUserMenu.jsp" %>
 <title>EditUser</title> 
 </head>
 
-<body>
+
+<body bgcolor= "#B0E0E6">
+
 <form method="post" action="EditUser_action.jsp" name="EditUser">
 
 <%

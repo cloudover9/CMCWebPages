@@ -7,16 +7,16 @@
 	int loginStatus = acc.login(username, password);
 	
 	if(loginStatus==3){
-		response.sendRedirect("Login.jsp?Error=-1");
+		response.sendRedirect("Login2.jsp?Error=-1");
 	}
 	else if(loginStatus==4){
-		response.sendRedirect("Login.jsp?Error=-2");
+		response.sendRedirect("Login2.jsp?Error=-2");
 	}
 	else if(loginStatus==5){
-		response.sendRedirect("Login.jsp?Error=-3");
+		response.sendRedirect("Login2.jsp?Error=-3");
 	}
 	else if(loginStatus==6){
-		response.sendRedirect("Login.jsp?Error=-4");
+		response.sendRedirect("Login2.jsp?Error=-4");
 	}
 // 	else if(loginStatus==7){
 // 		response.sendRedirect("Login.jsp?Error=-5");

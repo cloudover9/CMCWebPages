@@ -3,6 +3,7 @@
 <title>AddAccount</title>
 
 <%@include file= "TranslateFeature.jsp" %>
+<%@include file= "AdminMenu.jsp" %><br>
 </head><body>
 <form method="post" action="AddAccount_action.jsp" name="AddAccount">
 

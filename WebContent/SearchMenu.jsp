@@ -1,8 +1,9 @@
 <%@include file="verifyLogin.jsp"%>
 <html>
-<%@include file= "TranslateFeature.jsp" %>
 
+<%@include file= "TranslateFeature.jsp" %>
 <head>
+<%@include file= "GeneralUserMenu.jsp" %>
 <title>SearchMenu</title>
 </head>
 
@@ -55,10 +56,10 @@ Search Menu<br>
         <td style="vertical-align: top;">by LOCATION</td>
         <td style="vertical-align: top;">
         <select name="Location">
+        <option value="">UNKNOWN</option>
         <option value="SUBURBAN">SUBURBAN</option>
         <option value="URBAN">URBAN</option>
         <option value="SMALL-CITY">SMALL-CITY</option>
-        <option value="">UNKNOWN</option>
         </select>
 <br>
         </td>
@@ -67,10 +68,10 @@ Search Menu<br>
         <td style="vertical-align: top;">by CONTROL</td>
         <td style="vertical-align: top;">
         <select name="Control">
+        <option value="">UNKNOWN</option>
         <option value="PRIVATE">PRIVATE</option>
         <option value="STATE">STATE</option>
         <option value="CITY">CITY</option>
-        <option value="">UNKNOWN</option>
         </select>
 <br>
         </td>

@@ -21,7 +21,7 @@ for(String s: allSavedSchoolNames){
 
   <tbody>
     <tr align="center">
-      <td colspan="3" rowspan="1" style="vertical-align: top; text-align: center;">Saved Schools<br>
+      <td colspan="3" rowspan="1" style="vertical-align: top; text-align: center;"><b>Saved Schools</b><br>
       </td>
     </tr>
   
