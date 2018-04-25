@@ -109,7 +109,12 @@ public abstract class Account {
 
 		if ((newPassword.length() == 0) || (newPassword.contains(" "))) {
 			throw new IllegalArgumentException("Error! You must enter a non-empty String to set the password field!");
-		} else {
+		} 
+		else if (newPassword.length() < 3)
+		{
+			throw new IllegalArgumentException("Error: The password must be at least 3 characters long");
+		}
+		else {
 			this.password = newPassword;
 		}
 
