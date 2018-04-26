@@ -100,7 +100,7 @@ boolean first = true;
   		String schoolName = allSavedSchoolNames.get(i);
   	%>
 <div id="<%out.print(schoolName);%>" class="tabcontent">
-<h2><%out.println(schoolName); %></h2>
+<h2><font face = "Georgia"><%out.println(schoolName); %></font></h2>
 <%
 	String state = ufc.getUniversity(schoolName).getState();
 	String location = ufc.getUniversity(schoolName).getLocation();
@@ -134,72 +134,72 @@ boolean first = true;
       <td style="vertical-align: top;"> <%=location%> </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">CONTROL<br>
+      <td style="vertical-align: top;"><b>CONTROL</b><br>
       </td>
       <td style="vertical-align: top;"><%=control%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">NUMBER OF STUDENTS<br>
+      <td style="vertical-align: top;"><b>NUMBER OF STUDENTS</b><br>
       </td>
       <td style="vertical-align: top;"><%=students%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">% FEMALE<br>
+      <td style="vertical-align: top;"><b>% FEMALE</b><br>
       </td>
       <td style="vertical-align: top;"><%=femPerc%>% </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">SAT VERBAL<br>
+      <td style="vertical-align: top;"><b>SAT VERBAL</b><br>
       </td>
       <td style="vertical-align: top;"><%=satV%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">SAT MATH<br>
+      <td style="vertical-align: top;"><b>SAT MATH</b><br>
       </td>
       <td style="vertical-align: top;"><%=satM%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">EXPENSES<br>
+      <td style="vertical-align: top;"><b>EXPENSES</b><br>
       </td>
       <td style="vertical-align: top;"><%=cost%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">% FINANCIAL AID<br>
+      <td style="vertical-align: top;"><b>% FINANCIAL AID</b><br>
       </td>
       <td style="vertical-align: top;"><%=finAidPerc%>% </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">NUMBER OF APPLICANTS<br>
+      <td style="vertical-align: top;"><b>NUMBER OF APPLICANTS</b><br>
       </td>
       <td style="vertical-align: top;"><%=applicants%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">% ADMITTED<br>
+      <td style="vertical-align: top;"><b>% ADMITTED</b><br>
       </td>
       <td style="vertical-align: top;"><%=admitted%>% </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">% ENROLLED<br>
+      <td style="vertical-align: top;"><b>% ENROLLED</b><br>
       </td>
       <td style="vertical-align: top;"><%=enrolled%>% </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">ACADEMIC SCALE (1-5)<br>
+      <td style="vertical-align: top;"><b>ACADEMIC SCALE (1-5)</b><br>
       </td>
       <td style="vertical-align: top;"><%=acadScale%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">SOCIAL SCALE (1-5)<br>
+      <td style="vertical-align: top;"><b>SOCIAL SCALE (1-5)</b><br>
       </td>
       <td style="vertical-align: top;"><%=socScale%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">QUALITY OF LIFE SCALE (1-5)<br>
+      <td style="vertical-align: top;"><b>QUALITY OF LIFE SCALE (1-5)</b><br>
       </td>
       <td style="vertical-align: top;"><%=qualScale%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">EMPHASES<br>
+      <td style="vertical-align: top;"><b>EMPHASES</b><br>
       </td>
       <%ArrayList<String> emphases = ufc.getUniversity(schoolName).getEmphases();%>
       
