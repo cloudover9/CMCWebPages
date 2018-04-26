@@ -18,7 +18,7 @@ body {font-family: "Helvetica", sans-serif;}
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 25%;
+    width: 33%;
 }
 
 .tablink:hover {
@@ -42,7 +42,6 @@ body {font-family: "Helvetica", sans-serif;}
 </head>
 
 <body>
-<%@include file= "AdminMenu.jsp" %>
 
 
 <div id="main">
@@ -52,19 +51,14 @@ body {font-family: "Helvetica", sans-serif;}
 
 <p>Click on the buttons inside the tabbed menu:</p>
 
-<div id="Search" class="tabcontent">
-  <h3>Search</h3>
- <a href="SearchMenu.jsp" target="_self">Search for Schools</a> 
-</div>
-
 <div id="ManageSchool" class="tabcontent">
-  <h3>Manage Saved Schools </h3>
+  <h3>Manage Universities </h3>
   <a href="ManageUniversities.jsp" target="_self">Manage Universities</a>
   
 </div>
 
 <div id="ManageUser" class="tabcontent">
-  <h3>Manage My Profile </h3>
+  <h3>Manage Users </h3>
   <a href="ManageUsers.jsp" target="_self">Manage Users</a>
   
 </div>
@@ -77,9 +71,8 @@ body {font-family: "Helvetica", sans-serif;}
 
 
 
-<button class="tablink" onclick="openCity('Search', this, 'red')" id="defaultOpen">Manage Universities</button>
-  
-<button class="tablink" onclick="openCity('ManageSchool', this, 'green')">Manage Users</button>
+<button class="tablink" onclick="openCity('ManageSchool', this, 'red')" id="defaultOpen">Manage Universities</button>
+<button class="tablink" onclick="openCity('ManageUser', this, 'green')">Manage Users</button>
 <button class="tablink" onclick="openCity('Logout', this, 'orange')">Logout of CMC System</button>
 
 <script>
@@ -101,8 +94,6 @@ function openCity(cityName,elmnt,color) {
 document.getElementById("defaultOpen").click();
 </script>
 
-<a href="ManageUniversities.jsp" target="_self">Manage Universities</a><br>
-<a href="ManageUsers.jsp" target="_self">Manage Users</a><br>
 </body>
 
 </html>
