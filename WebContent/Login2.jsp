@@ -123,7 +123,7 @@ if(anyErrors!=null && anyErrors.equals("-4")){%>
 if(anyErrors!=null && anyErrors.equals("-5")){//When would this happen?%>
 	<div class="alert">
 	  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  Sorry your username is incorrect! Please log in again!
+	  Sorry, your username is not recognized!
 	</div><br>
 	<%}
 if(anyErrors!=null && anyErrors.equals("-6")){%>
