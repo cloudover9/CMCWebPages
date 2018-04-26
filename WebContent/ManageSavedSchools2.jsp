@@ -2,9 +2,9 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<%@include file= "TranslateFeature.jsp" %>
+
 <%@include file= "GeneralUserMenu.jsp" %>
-<br>
+
 <%
 UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
 GeneralUser gu = ufc.getCurrentGeneralUser();
@@ -13,6 +13,8 @@ ArrayList<String> allSavedSchoolNames = gu.getSavedSchools();
 
 %>
 <head>
+<h1 style="text-align: right;"> <%@include file= "TranslateFeature.jsp" %></h1>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box}
