@@ -205,6 +205,7 @@ public class DBController
    * removes a school from a user's saved school list
    * @param gu the GeneralUser who wishes to remove a saved school 
    * @param univ University to be removed
+   * @return an int value indicating where the removal was successful
    */
   public int removeSchoolFromSavedSchoolList(GeneralUser gu, University univ)
   {
@@ -224,7 +225,7 @@ public class DBController
   
   /**
    * deletes an account from the database
-   * @param acc the account to deleted from the database
+   * @param acc the account to deleted from the databases
    */
   public int deleteAccount(Account acc)
   {
@@ -245,6 +246,7 @@ public class DBController
    * Deletes an emphasis to the corresponding university in the database
    * @param univ the university to delete the emphasis
    * @param emphasis the emphasis to delete
+   * @return an int value indicating whether the emphasis was removed from the specified university
    */
   public int deleteEmphasis(University univ, String emphasis) 
   {

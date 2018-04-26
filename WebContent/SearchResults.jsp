@@ -164,7 +164,7 @@
 
   <tbody>
     <tr>
-      <td style="vertical-align: top; text-align: center;">School<br>
+      <td style="vertical-align: top; text-align: center;">Your search has returned a total of <%=searchedUniversities.size()%> schools<br>
       </td>
     </tr>
   </tbody>

@@ -29,7 +29,6 @@ public class GeneralUser extends Account
   */
   public GeneralUser(String firstName, String lastName, char active,String username, String password,ArrayList<String> savedUniversities) //add in paramaeter for savedUniverisisyd
   {
-	
     this.setUsername(username); 
     this.setFirstName(firstName);
     this.setLastName(lastName);

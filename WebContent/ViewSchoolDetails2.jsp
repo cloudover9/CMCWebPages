@@ -1,28 +1,11 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
 <%@include file="verifyLogin.jsp"%>
+<%@include file= "TranslateFeature.jsp" %>
 <html>
 <head>
 <style>
 </style>
 </head>
-<style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even){background-color: #ddd}
-
-
-</style>
 <%
 	UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
 	String schoolName = request.getParameter("SchoolName");
@@ -44,91 +27,86 @@ tr:nth-child(even){background-color: #ddd}
 %>
 
 <body>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
-
+<h1 style="background-color:Gray;" ><br><%=schoolName%></h1>
+<table style="text-align: left; width: 80%;" border="1" >
   <tbody>
     <tr>
-      <td style="vertical-align: top;">SCHOOL<br>
+      <td style="vertical-align: top;"><b>STATE</b><br>
       </td>
-      <td style="vertical-align: top;"> <%=schoolName%> </td>
+      <td style="vertical-align: top;"><%=state%> </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">STATE<br>
+      <td style="vertical-align: top;"><b>LOCATION</b><br>
       </td>
-      <td style="vertical-align: top;"> <%=state%></td>
+      <td style="vertical-align: top;"><%=location%> </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">LOCATION<br>
-      </td>
-      <td style="vertical-align: top;"> <%=location%> </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">CONTROL<br>
+      <td style="vertical-align: top;"><b>CONTROL</b><br>
       </td>
       <td style="vertical-align: top;"><%=control%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">NUMBER OF STUDENTS<br>
+      <td style="vertical-align: top;"><b>NUMBER OF STUDENTS</b><br>
       </td>
-      <td style="vertical-align: top;"><%=students%></td>
+      <td style="vertical-align: top;"><%=students%> </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">% FEMALE<br>
+      <td style="vertical-align: top;"><b>% FEMALE</b><br>
       </td>
-      <td style="vertical-align: top;"><%=femPerc%>% </td>
+      <td style="vertical-align: top;"><%=femPerc%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">SAT VERBAL<br>
+      <td style="vertical-align: top;"><b>SAT VERBAL</b><br>
       </td>
-      <td style="vertical-align: top;"><%=satV%></td>
+      <td style="vertical-align: top;"><%=satV%> </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">SAT MATH<br>
+      <td style="vertical-align: top;"><b>SAT MATH</b><br>
       </td>
-      <td style="vertical-align: top;"><%=satM%></td>
+      <td style="vertical-align: top;"><%=satM%> </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">EXPENSES<br>
+      <td style="vertical-align: top;"><b>EXPENSES</b><br>
       </td>
       <td style="vertical-align: top;"><%=cost%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">% FINANCIAL AID<br>
+      <td style="vertical-align: top;"><b>% FINANCIAL AID</b><br>
       </td>
-      <td style="vertical-align: top;"><%=finAidPerc%>% </td>
+      <td style="vertical-align: top;"><%=finAidPerc%> </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">NUMBER OF APPLICANTS<br>
+      <td style="vertical-align: top;"><b>NUMBER OF APPLICANTS</b><br>
       </td>
       <td style="vertical-align: top;"><%=applicants%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">% ADMITTED<br>
+      <td style="vertical-align: top;"><b>% ADMITTED</b><br>
       </td>
-      <td style="vertical-align: top;"><%=admitted%>% </td>
+      <td style="vertical-align: top;"><%=admitted%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">% ENROLLED<br>
+      <td style="vertical-align: top;"><b>% ENROLLED</b><br>
       </td>
-      <td style="vertical-align: top;"><%=enrolled%>% </td>
+      <td style="vertical-align: top;"><%=enrolled%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">ACADEMIC SCALE (1-5)<br>
+      <td style="vertical-align: top;"><b>ACADEMIC SCALE (1-5)</b><br>
       </td>
       <td style="vertical-align: top;"><%=acadScale%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">SOCIAL SCALE (1-5)<br>
+      <td style="vertical-align: top;"><b>SOCIAL SCALE (1-5)</b><br>
       </td>
-      <td style="vertical-align: top;"><%=socScale%></td>
+      <td style="vertical-align: top;"><%=socScale%> </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">QUALITY OF LIFE SCALE (1-5)<br>
+      <td style="vertical-align: top;"><b>QUALITY OF LIFE SCALE (1-5)</b><br>
       </td>
       <td style="vertical-align: top;"><%=qualScale%></td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">EMPHASES<br>
+      <td style="vertical-align: top;"><b>EMPHASES</b><br>
       </td>
       <%ArrayList<String> emphases = ufc.getUniversity(schoolName).getEmphases();%>
       
@@ -140,15 +118,15 @@ tr:nth-child(even){background-color: #ddd}
       	else{%>
       		<td style="vertical-align: top;">
       <% 
-      		for(int l=0; l<emphases.size();l++){ 
-      			String emphasis = emphases.get(l);
+      		for(int i=0; i<emphases.size();i++){ 
+      			String emphasis = emphases.get(i);
       %>
       			
-      				<%=emphasis%><br>
-      			
+      				<%=emphasis%>  <br>
       <%	} %>
       		</td>
-      <%}%>	
+      <%}%>
+      	
     </tr>
   </tbody>
 </table>
