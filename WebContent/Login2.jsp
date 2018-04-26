@@ -142,8 +142,8 @@ if(anyErrors!=null && anyErrors.equals("-6")){%>
     <label for="lname">Password</label>
     <input type="password" id="lname" name="Password">
   
-  	<input type="reset" value="Reset" name=Reset>
-    <input type="submit" value="Submit">
+  	<input  style="font-size:16px" type="reset" value="Reset"  name=Reset>
+    <input style="font-size:16px" type="submit" value="Submit">
   </form>
 </div>
 

@@ -40,7 +40,7 @@ public class AccountController {
 	 * @throws IllegalArgumentException    if input is empty
 	 *             
 	 * 
-	 * @return boolean          true if user was logged in, false if they were not
+	 * @return boolean    true if user was logged in, false if they were not
 	 */
 	public int login(String username, String password) {
 		// find a user in the database
