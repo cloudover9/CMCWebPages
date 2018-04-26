@@ -38,7 +38,7 @@ body {font-family: "Helvetica", sans-serif;}
 
 #Search {background-color:red;}
 #ManageSchool {background-color:green;}
-#ManageP {background-color:cyan;}
+#ManageP {background-color:#0077fb;}
 #Logout {background-color:orange;}
 </style>
 </head>
@@ -83,7 +83,7 @@ body {font-family: "Helvetica", sans-serif;}
 <button class="tablink" onclick="openCity('Search', this, 'red')" id="defaultOpen">Search for A School</button>
   
 <button class="tablink" onclick="openCity('ManageSchool', this, 'green')">Manage My Saved Schools</button>
-<button class="tablink" onclick="openCity('ManageP', this, 'cyan')">Manage My Profile</button>
+<button class="tablink" onclick="openCity('ManageP', this, '#0077fb')">Manage My Profile</button>
 <button class="tablink" onclick="openCity('Logout', this, 'orange')">Logout of CMC System</button>
 
 <script>
