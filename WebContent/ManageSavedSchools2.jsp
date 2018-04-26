@@ -9,8 +9,6 @@
 UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
 GeneralUser gu = ufc.getCurrentGeneralUser();
 ArrayList<String> allSavedSchoolNames = gu.getSavedSchools();
-
-
 %>
 <head>
 <h1 style="text-align: right;"> <%@include file= "TranslateFeature.jsp" %></h1>
