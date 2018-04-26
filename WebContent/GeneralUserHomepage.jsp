@@ -38,14 +38,16 @@ body {font-family: "Helvetica", sans-serif;}
 
 #Search {background-color:red;}
 #ManageSchool {background-color:green;}
-#ManageP {background-color:cyan;}
+
+#ManageP {background-color:#0077fb;}
+
 #Logout {background-color:orange;}
 </style>
 </head>
 <body>
 
 
-<%@include file= "GeneralUserMenu.jsp" %>
+
 
 
 <div id="main">
@@ -53,7 +55,7 @@ body {font-family: "Helvetica", sans-serif;}
   
 </div>
 
-<p>Click on the buttons inside the tabbed menu:</p>
+
 
 <div id="Search" class="tabcontent">
   <h3>Search</h3>
@@ -75,19 +77,21 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="Logout" class="tabcontent">
   <h3>Logout</h3>
-    <a href="GeneralUserHomePage.jsp" target="_self">Logout </a>
+    <a href="#" target="_self">Logout </a>
 </div>
 
 
 
-<button class="tablink" onclick="openCity('Search', this, 'red')" id="defaultOpen">Search for A School</button>
+<button class="tablink" onclick="openTab('Search', this, 'red')" id="defaultOpen">Search for A School</button>
   
-<button class="tablink" onclick="openCity('ManageSchool', this, 'green')">Manage My Saved Schools</button>
-<button class="tablink" onclick="openCity('ManageP', this, 'cyan')">Manage My Profile</button>
-<button class="tablink" onclick="openCity('Logout', this, 'orange')">Logout of CMC System</button>
+
+<button class="tablink" onclick="openTab('ManageSchool', this, 'green')">Manage My Saved Schools</button>
+<button class="tablink" onclick="openTab('ManageP', this, '#0077fb')">Manage My Profile</button>
+<button class="tablink" onclick="openTab('Logout', this, 'orange')">Logout of CMC System</button>
+
 
 <script>
-function openCity(cityName,elmnt,color) {
+function openTab(tabName,elmnt,color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -97,11 +101,11 @@ function openCity(cityName,elmnt,color) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
     elmnt.style.backgroundColor = color;
 
 }
-// Get the element with id="defaultOpen" and click on it
+
 document.getElementById("defaultOpen").click();
 </script>
      
