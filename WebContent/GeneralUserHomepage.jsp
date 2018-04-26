@@ -77,7 +77,7 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="Logout" class="tabcontent">
   <h3>Logout</h3>
-    <a href="#" target="_self">Logout </a>
+    <a href="Logout_action.jsp" target="_self">Logout </a>
 </div>
 
 

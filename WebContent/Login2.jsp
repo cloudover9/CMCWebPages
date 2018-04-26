@@ -14,7 +14,6 @@
 
 <style>
 
-
 input[type=username], select {
     width: 100%;
     padding: 12px 20px;
