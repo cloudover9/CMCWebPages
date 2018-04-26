@@ -5,7 +5,7 @@
 </head>
 <%-- <img src="${pageContext.request.contextPath}/images/logo.jpg" alt = "Home" class= "center" style="float:left;width:150px;height:150px;" > --%>
 <!-- <h1 style="background-color:Gray;text-align:center;" > <br><br> Welcome to the CMC System!<br><br><br> -->
-<!-- </h1> -->
+<!-- </h1>  -->
 <body>
 
 
