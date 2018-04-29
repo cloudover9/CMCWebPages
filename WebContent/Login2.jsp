@@ -37,13 +37,18 @@ input[type=username], select {
 }
 
 input[type=submit] {
-    width: 100%;
+    width : 100%;
     background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
+    color: black;
+    padding: 5px 32px;
     border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Verdana';
+    margin: 2px 8px;
     cursor: pointer;
 }
 
@@ -52,13 +57,18 @@ input[type=submit]:hover {
 }
 
 input[type=reset] {
-    width: 100%;
+    width : 100%;
     background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
+    color: black;
+    padding: 5px 32px;
     border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Verdana';
+    margin: 2px 8px;
     cursor: pointer;
 }
 
@@ -142,8 +152,8 @@ if(anyErrors!=null && anyErrors.equals("-6")){%>
     <input type="password" id="lname" name="Password">
   
   	
-    <input style="font-size:16px" type="submit" value="Submit">
-   <input  style="font-size:16px" type="reset" value="Reset"  name=Reset>
+    <input style="font-size:16px" type="submit" alt= "Submit Login Credentials" value="Submit">
+   <input  style="font-size:16px" type="reset" alt= "Reset Login Credentials" value="Reset"  name=Reset>
   </form>
 </div>
 
