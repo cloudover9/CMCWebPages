@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 
-<%@include file= "GeneralUserMenu.jsp" %>
+<%@include file= "GeneralUserMenu2.jsp" %>
 
 <%
 UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 

@@ -8,7 +8,7 @@
 <html>
 
 <head>
-<%@include file= "GeneralUserMenu.jsp" %>
+<%@include file= "GeneralUserMenu2.jsp" %>
 <title>EditUser</title> 
 </head>
 
