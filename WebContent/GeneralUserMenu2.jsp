@@ -28,7 +28,6 @@
 <div class="w3-grey">
   <button id="openNav"  class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
   <div class="w3-container">
-    
   </div>
 </div>
 
