@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>General User Sidebar Navigation</title>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
 <div class="w3-grey">
   <button id="openNav"  class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
   <div class="w3-container">
-    <h1>Search Menu</h1>
+    
   </div>
 </div>
 

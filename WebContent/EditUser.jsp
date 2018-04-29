@@ -12,9 +12,6 @@
 <title>EditUser</title> 
 </head>
 
-
-
-
 <form method="post" action="EditUser_action.jsp" name="EditUser">
 
 <%
