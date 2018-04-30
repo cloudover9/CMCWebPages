@@ -8,12 +8,9 @@
 <html>
 
 <head>
-<%@include file= "GeneralUserMenu.jsp" %>
+<%@include file= "GeneralUserMenu2.jsp" %>
 <title>EditUser</title> 
 </head>
-
-
-
 
 <form method="post" action="EditUser_action.jsp" name="EditUser">
 

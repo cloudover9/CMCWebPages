@@ -119,7 +119,7 @@ tr:nth-child(even){background-color: #ddd}
   <a href="ManageSavedSchools2.jsp">Manage Saved Schools</a>
   <a href="EditUser.jsp">Manage Profile</a>
   <br><br>
-  <a href="#">Logout</a>
+  <a href="Logout_action.jsp">Logout</a>
 </div>
 
 <script>

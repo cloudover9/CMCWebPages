@@ -3,9 +3,9 @@
 
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body {font-family: "Helvetica", sans-serif;}
 
@@ -15,7 +15,6 @@ body {font-family: "Helvetica", sans-serif;}
     float: left;
     border: none;
     outline: none;
-    
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
@@ -23,35 +22,30 @@ body {font-family: "Helvetica", sans-serif;}
 }
 
 .tablink:hover {
-    background-color: #777;
+    background-color: #525252;
 }
 
 /* Style the tab content */
 .tabcontent {
-    color: white;
+    color: black;
     display: none;
     padding: 50px;
-    
+    font-size: 18px;
     text-align: center;
 }
 
 
-#Search {background-color:red;}
-#ManageSchool {background-color:green;}
+#Search {background-color:#FF6347;}
+#ManageSchool {background-color:#00B300;}
 #ManageP {background-color:#0077fb;}
 #Logout {background-color:orange;}
 </style>
 </head>
 <body>
 
-
-
-
-
-<div id="main">  
+<div id="main">
+  
 </div>
-
-
 
 <div id="Search" class="tabcontent">
   <h3>Search</h3>
@@ -71,11 +65,10 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="Logout" class="tabcontent">
   <h3>Logout</h3>
-    <a href="#" target="_self">Logout </a>
+    <a href="Logout_action.jsp" target="_self">Logout </a>
 </div>
 
-
-<button class="tablink" onclick="openTab('Search', this, 'red')" id="defaultOpen">Search for A School</button>
+<button class="tablink" onclick="openTab('Search', this, '#FF6347')" id="defaultOpen">Search for A School</button>
 <button class="tablink" onclick="openTab('ManageSchool', this, 'green')">Manage My Saved Schools</button>
 <button class="tablink" onclick="openTab('ManageP', this, '#0077fb')">Manage My Profile</button>
 <button class="tablink" onclick="openTab('Logout', this, 'orange')">Logout of CMC System</button>

@@ -14,7 +14,6 @@
 
 <style>
 
-
 input[type=username], select {
     width: 100%;
     padding: 12px 20px;
@@ -38,13 +37,18 @@ input[type=username], select {
 }
 
 input[type=submit] {
-    width: 100%;
+    width : 100%;
     background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
+    color: black;
+    padding: 5px 32px;
     border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Verdana';
+    margin: 2px 8px;
     cursor: pointer;
 }
 
@@ -53,13 +57,18 @@ input[type=submit]:hover {
 }
 
 input[type=reset] {
-    width: 100%;
+    width : 100%;
     background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
+    color: black;
+    padding: 5px 32px;
     border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Verdana';
+    margin: 2px 8px;
     cursor: pointer;
 }
 
@@ -124,7 +133,7 @@ if(anyErrors!=null && anyErrors.equals("-4")){%>
 if(anyErrors!=null && anyErrors.equals("-5")){//When would this happen?%>
 	<div class="alert">
 	  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  Sorry your username is incorrect! Please log in again!
+	  Sorry, your username is not recognized!
 	</div><br>
 	<%}
 if(anyErrors!=null && anyErrors.equals("-6")){%>
@@ -142,8 +151,9 @@ if(anyErrors!=null && anyErrors.equals("-6")){%>
     <label for="lname">Password</label>
     <input type="password" id="lname" name="Password">
   
-  	<input type="reset" value="Reset" name=Reset>
-    <input type="submit" value="Submit">
+  	
+    <input style="font-size:16px" type="submit" alt= "Submit Login Credentials" value="Submit">
+   <input  style="font-size:16px" type="reset" alt= "Reset Login Credentials" value="Reset"  name=Reset>
   </form>
 </div>
 
