@@ -11,6 +11,39 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Helvetica", sans-serif;}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #525252;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#Search {background-color:#FF6347;}
+#ManageSchool {background-color:#00B300;}
+#ManageP {background-color:#0077fb;}
+#Logout {background-color:orange;}
+</style>
 <body>
 
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">

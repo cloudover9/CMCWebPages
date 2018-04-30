@@ -9,6 +9,7 @@
 
 <head>
 <%@include file= "GeneralUserMenu2.jsp" %>
+<%@include file= "GeneralUserMenu.jsp" %>
 <title>EditUser</title> 
 </head>
 

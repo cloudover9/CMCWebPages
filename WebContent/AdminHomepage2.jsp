@@ -49,8 +49,6 @@ body {font-family: "Helvetica", sans-serif;}
   
 </div>
 
-<p>Click on the buttons inside the tabbed menu:</p>
-
 <div id="ManageSchool" class="tabcontent">
   <h3>Manage Universities </h3>
   <a href="ManageUniversities.jsp" target="_self">Manage Universities</a>
@@ -66,7 +64,7 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="Logout" class="tabcontent">
   <h3>Logout</h3>
-    <a href="AdminHomepage.jsp" target="_self">Logout </a>
+    <a href="Logout_action.jsp" target="_self">Logout </a>
 </div>
 
 
