@@ -108,30 +108,30 @@ th, td {
 
 tr:nth-child(even){background-color: #ddd}
 </style>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-</head>
-<body>
+<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span> -->
+<!-- </head> -->
+<!-- <body> -->
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="GeneralUserHomepage.jsp">Home</a>
-  <a href="SearchMenu.jsp">Search</a>
-  <a href="ManageSavedSchools2.jsp">Manage Saved Schools</a>
-  <a href="EditUser.jsp">Manage Profile</a>
-  <br><br>
-  <a href="Logout_action.jsp">Logout</a>
-</div>
+<!-- <div id="mySidenav" class="sidenav"> -->
+<!--   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+<!--   <a href="GeneralUserHomepage.jsp">Home</a> -->
+<!--   <a href="SearchMenu.jsp">Search</a> -->
+<!--   <a href="ManageSavedSchools2.jsp">Manage Saved Schools</a> -->
+<!--   <a href="EditUser.jsp">Manage Profile</a> -->
+<!--   <br><br> -->
+<!--   <a href="Logout_action.jsp">Logout</a> -->
+<!-- </div> -->
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
+<!-- <script> -->
+<!-- // function openNav() { -->
+<!-- //     document.getElementById("mySidenav").style.width = "250px"; -->
+<!-- //     document.getElementById("main").style.marginLeft = "250px"; -->
+<!-- // } -->
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-}
-</script>
+<!-- // function closeNav() { -->
+<!-- //     document.getElementById("mySidenav").style.width = "0"; -->
+<!-- //     document.getElementById("main").style.marginLeft= "0"; -->
+<!-- // } -->
+<!-- </script> -->
 </body>
 </html>

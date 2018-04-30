@@ -3,6 +3,7 @@
 <%@include file= "TranslateFeature.jsp" %>
 <html>
 <head>
+<%@include file= "GeneralUserMenu2.jsp" %>
 <%@include file= "GeneralUserMenu.jsp" %>
   <title>SearchResults</title>
 </head>
