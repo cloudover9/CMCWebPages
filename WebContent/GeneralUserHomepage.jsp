@@ -48,9 +48,7 @@ body {font-family: "Helvetica", sans-serif;}
 
 
 
-<div id="main">
-
-  
+<div id="main">  
 </div>
 
 
@@ -63,13 +61,11 @@ body {font-family: "Helvetica", sans-serif;}
 <div id="ManageSchool" class="tabcontent">
   <h3>Manage Saved Schools </h3>
   <a href="ManageSavedSchools2.jsp" target="_self">Manage My Saved Schools</a>
-  
 </div>
 
 <div id="ManageP" class="tabcontent">
   <h3>Manage My Profile </h3>
   <a href="EditUser.jsp" target="_self">Manage My Profile</a>
-  
 </div>
 
 
@@ -79,20 +75,10 @@ body {font-family: "Helvetica", sans-serif;}
 </div>
 
 
-
 <button class="tablink" onclick="openTab('Search', this, 'red')" id="defaultOpen">Search for A School</button>
-  
-<<<<<<< HEAD
-<button class="tablink" onclick="openCity('ManageSchool', this, 'green')">Manage My Saved Schools</button>
-<button class="tablink" onclick="openCity('ManageP', this, '#0077fb')">Manage My Profile</button>
-<button class="tablink" onclick="openCity('Logout', this, 'orange')">Logout of CMC System</button>
-=======
-
 <button class="tablink" onclick="openTab('ManageSchool', this, 'green')">Manage My Saved Schools</button>
 <button class="tablink" onclick="openTab('ManageP', this, '#0077fb')">Manage My Profile</button>
 <button class="tablink" onclick="openTab('Logout', this, 'orange')">Logout of CMC System</button>
-
->>>>>>> 2368eecd74bd77a44682556885b89f7663cdcc48
 
 <script>
 function openTab(tabName,elmnt,color) {
