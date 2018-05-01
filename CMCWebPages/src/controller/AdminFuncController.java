@@ -451,4 +451,9 @@ public class AdminFuncController {
 		}
 
 	}
+	
+	public void updateAdmin(Admin newAdmin)
+	  {
+	   admin = newAdmin;
+	  }
 }

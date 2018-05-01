@@ -32,7 +32,7 @@
 }
 
 </style>
-<form method="post" action="EditUser_action.jsp" name="EditUser">
+<form method="post" action="EditAdmin_action.jsp" name="EditAdmin">
 
 <%
 String anyErrors = request.getParameter("Error");
