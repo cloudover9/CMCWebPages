@@ -115,7 +115,7 @@ document.getElementById("defaultOpen").click();
 
    <h2> Windows/Linux  Users </h4>
   <p> If you are using Internet Explorer or Chrome browser for the website, press Alt + keychoice   </p>
-  <p> If you are using Firefox browser on Windows device, press Alt +  + Shift + keychoice   </p>
+  <p> If you are using Firefox browser on Windows device, press Alt +  Shift + keychoice   </p>
   
   
  
