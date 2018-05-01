@@ -35,10 +35,10 @@ body {font-family: "Helvetica", sans-serif;}
 }
 
 
-#Search {background-color:#FF6347;}
-#ManageSchool {background-color:#00B300;}
-#ManageP {background-color:#0077fb;}
-#Logout {background-color:orange;}
+#Search {background-color:#FFC2C2;}
+#ManageSchool {background-color:#94FF94;}
+#ManageP {background-color:cyan;}
+#Logout {background-color:#FFC861;}
 </style>
 </head>
 <body>
