@@ -13,25 +13,7 @@
 
 
 
-<style>
 
-.submit:hover, .submit:focus{
-    background-color: green;
-    color: white;
-    border-radius:15px;border:5px solid black;
-    padding: 10px; 
-    font-size: 16px;
-}
-
-.reset:hover, .reset:focus{
-    background-color: green;
-    color: white;
-    border-radius:15px;border:5px solid black;
-    padding: 10px; 
-    font-size: 16px;
-}
-
-</style>
 <form method="post" action="EditUser_action.jsp" name="EditUser">
 
 <%

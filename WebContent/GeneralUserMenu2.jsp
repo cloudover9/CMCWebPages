@@ -13,6 +13,63 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 body {font-family: "Helvetica", sans-serif;}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #ddd}
+
+input[type=submit] {
+  background-color: #cccccc; 
+   color: black; 
+   border: 2px solid #cccccc;
+   padding: 4px 8px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   -webkit-transition-duration: 0.4s; 
+   transition-duration: 0.4s;
+   cursor: pointer;
+   border-radius: 4px
+}
+
+/*Keyboard user can also highlight current element    */
+input[type=submit]:hover, input[type=submit]:focus  {
+background-color: #429AFF;
+    color: black;
+    border-radius:5px;border:2px solid black;
+    font-size: 16px;
+}
+
+input[type=reset] {
+  background-color: #cccccc; 
+   color: black; 
+   border: 2px solid #cccccc;
+   padding: 4px 8px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   -webkit-transition-duration: 0.4s; 
+   transition-duration: 0.4s;
+   cursor: pointer;
+   border-radius: 4px
+}
+input[type=reset]:hover ,  input[type=reset]:focus{
+ background-color: #429AFF;
+    color: black;
+    border-radius:5px;border:2px solid black;
+    font-size: 16px;
+    }    
 
 .tablink {
     background-color: #555;

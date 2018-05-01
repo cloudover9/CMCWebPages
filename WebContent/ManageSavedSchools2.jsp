@@ -45,16 +45,16 @@ body {font-family: "Helvetica";}
 /* Change background color of buttons on hover */
 .tab button:hover, .tab button:focus {
     background-color: #ddd;
-    border-radius:15px;border:5px solid black;
-    padding: 10px; 
+    border-radius:5px;border:2px solid black;
+
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-    background-color: green;
-    color: white;
-    border-radius:15px;border:5px solid black;
-    padding: 10px; 
+    background-color: #429AFF;
+    color: black;
+    border-radius:5px;border:2px solid black;
+
 }
 
 /* Style the tab content */

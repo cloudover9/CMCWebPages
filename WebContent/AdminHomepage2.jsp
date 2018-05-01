@@ -20,7 +20,7 @@ body {font-family: "Helvetica", sans-serif;}
 }
 
 .tablink:hover, .tablink:focus {
-    border-radius:15px;border:5px solid black;
+   border:5px solid black;
     padding: 15px;
 }
 

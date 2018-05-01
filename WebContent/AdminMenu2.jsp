@@ -7,7 +7,7 @@
 <title>CMC System: Admin </title>
 <!--  THE BAR WORKS -->
 <style>
-
+body {font-family: "Helvetica", sans-serif;}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -38,10 +38,9 @@ input[type=submit] {
 
 /*Keyboard user can also highlight current element    */
 input[type=submit]:hover, input[type=submit]:focus  {
-background-color: #005C00;
-    color: white;
-    border-radius:15px;border:5px solid black;
-    padding: 10px; 
+background-color: #429AFF;
+    color: black;
+    border-radius:5px;border:2px solid black;
     font-size: 16px;
 }
 
@@ -61,10 +60,9 @@ input[type=reset] {
    border-radius: 4px
 }
 input[type=reset]:hover ,  input[type=reset]:focus{
-    background-color: #005C00;
-    color: white;
-    border-radius:15px;border:5px solid black;
-    padding: 10px; 
+ background-color: #429AFF;
+    color: black;
+    border-radius:5px;border:2px solid black;
     font-size: 16px;
     }    
 </style>
