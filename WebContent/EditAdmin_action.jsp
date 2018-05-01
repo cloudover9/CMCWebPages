@@ -16,6 +16,6 @@
 	}
 	else{
 		afc.updateAdmin((Admin)afc.getAccount(request.getParameter("Username")));
-		response.sendRedirect("EditAdmin.jsp");
+		response.sendRedirect("EditAdmin.jsp?Message=1");
 	}
 %>

@@ -36,6 +36,7 @@
 
 <%
 String anyErrors = request.getParameter("Error");
+String msg = request.getParameter("Message");
 if(anyErrors!=null && anyErrors.equals("-1")){
 	out.println("The first name is empty.<br>");
 }
@@ -44,6 +45,9 @@ if(anyErrors!=null && anyErrors.equals("-2")){
 }
 if(anyErrors!=null && anyErrors.equals("-3")){
 	out.println("The password is empty.<br>");
+}
+if(msg !=null && msg.equals("1")){
+	out.println("Your account has been successfully updated.<br>");
 }
 %>
 
