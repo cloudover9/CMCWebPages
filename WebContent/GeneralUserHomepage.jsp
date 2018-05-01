@@ -100,21 +100,19 @@ document.getElementById("defaultOpen").click();
  
  <p> Tab to the menu icon located under the the Translate feature. Open the sidebar menu by selecting the Enter key.    </p> 
  
- <h2  Key choices ></h2>
+ <h2>  Keychoices </h2>
  <ul>   
  <li> Close, press 'c'  </li>
  <li> Visit Homepage, press 'a'  </li>
- <li> Search for Schools, press 's'  </li>
- <li> Manage Saved Schools, press 'm'  </li>
- <li> Manage Profile, press 'p'  </li>
+ <li> Manage Users, press 's'  </li>
+ <li> Manage Universities, press 'd'  </li>
  <li> Logout, press 'q'  </li>
  </ul>
  
   <h2> Mac Users </h4>
   <p> If you are using a Mac device for the website, press Control + Alt + keychoice   </p>
   
-  <br>
-  
+
    <h2> Windows/Linux  Users </h4>
   <p> If you are using Internet Explorer or Chrome browser for the website, press Alt + keychoice   </p>
   <p> If you are using Firefox browser on Windows device, press Alt +  + Shift + keychoice   </p>

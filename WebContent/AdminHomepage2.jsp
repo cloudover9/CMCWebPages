@@ -109,8 +109,7 @@ document.getElementById("defaultOpen").click();
  <li> Close, press 'c'  </li>
  <li> Visit Homepage, press 'a'  </li>
  <li> Search for Schools, press 's'  </li>
- <li> Manage Saved Schools, press 'm'  </li>
- <li> Manage Profile, press 'p'  </li>
+ <li> Manage Saved Schools, press 'd'  </li>
  <li> Logout, press 'q'  </li>
  </ul>
  
