@@ -77,7 +77,7 @@ public class SearchController{
         n=true;
       if(u.getState().contains(state))
         s=true;
-      if(u.getLocation().contains(location))
+      if(u.getLocation().contains(location) || u.getLocation().equals("-1"))
         l=true;
       if(u.getControl().contains(control))
         c=true;
@@ -85,25 +85,25 @@ public class SearchController{
         ns=true;
       if(femPercLow<=u.getFemPerc() && u.getFemPerc()<=femPercHigh)
         pf=true;
-      if(satVLow<=u.getSatV() && u.getFemPerc()<=satVHigh)
+      if((satVLow<=u.getSatV() && u.getSatV()<=satVHigh) || u.getSatV() == -1)
         sv=true;
-      if(satMLow<=u.getSatM() && u.getSatM()<=satMHigh)
+      if((satMLow<=u.getSatM() && u.getSatM()<=satMHigh) || u.getSatM() == -1)
         sm=true;
       if(costLow<=u.getCost() && u.getCost()<=costHigh)
         exp=true;
-      if(finAidPercLow<=u.getFinAidPerc() && u.getFinAidPerc()<=finAidPercHigh)
+      if((finAidPercLow<=u.getFinAidPerc() && u.getFinAidPerc()<=finAidPercHigh) || u.getFinAidPerc() == -1)
         pfa=true;
-      if(applicantsLow<=u.getApplicants() && u.getApplicants()<=applicantsHigh)
+      if((applicantsLow<=u.getApplicants() && u.getApplicants()<=applicantsHigh) || u.getApplicants() == -1)
         na=true;
-      if(admittedLow<=u.getAdmitted() && u.getAdmitted()<=admittedHigh)
+      if((admittedLow<=u.getAdmitted() && u.getAdmitted()<=admittedHigh) || u.getAdmitted() == -1 )
         pa=true;
-      if(enrolledLow<=u.getEnrolled() && u.getEnrolled()<=enrolledHigh)
+      if((enrolledLow<=u.getEnrolled() && u.getEnrolled()<=enrolledHigh) || u.getEnrolled() == -1)
         pe=true;
-      if(acadScaleLow<=u.getAcadScale() && u.getAcadScale()<=acadScaleHigh)
+      if((acadScaleLow<=u.getAcadScale() && u.getAcadScale()<=acadScaleHigh) || u.getAcadScale() == -1)
         as=true;
-      if(socLifeScaleLow<=u.getSocScale() && u.getSocScale()<=socLifeScaleHigh)
+      if((socLifeScaleLow<=u.getSocScale() && u.getSocScale()<=socLifeScaleHigh) || u.getSocScale() == -1 )
         ss=true;
-      if(qualLifeScaleLow<=u.getQualScale() && u.getQualScale()<=qualLifeScaleHigh)
+      if((qualLifeScaleLow<=u.getQualScale() && u.getQualScale()<=qualLifeScaleHigh || u.getQualScale() == -1)
         qls=true;
       
       for(String str: emphases){
