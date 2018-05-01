@@ -10,27 +10,27 @@
 body {font-family: "Helvetica", sans-serif;}
 
 .tablink {
-    background-color: #555;
+    background-color: #454545;
     color: white;
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    font-size: 17px;
+    font-size: 18px;
     width: 25%;
 }
 
-.tablink:hover {
-    background-color: #525252;
+.tablink:hover, .tablink:focus {
+   border:5px solid black;
+    padding: 15px;
 }
 
 /* Style the tab content */
 .tabcontent {
-    color: black;
+    color: white;
     display: none;
     padding: 50px;
-    font-size: 18px;
     text-align: center;
 }
 
@@ -54,7 +54,12 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="ManageSchool" class="tabcontent">
   <h3>Manage Saved Schools </h3>
+<<<<<<< HEAD
   <a href="ManageSavedSchools2.jsp" target="_self">Manage My Saved Schools</a>
+=======
+  <a href="ManageSavedSchools2.jsp" target="_self">Manage Saved Schools</a>
+  
+>>>>>>> 8c98d545b55bed64ae25613e88f13082f47a40c8
 </div>
 
 <div id="ManageP" class="tabcontent">

@@ -13,29 +13,12 @@
 
 
 
-<style>
 
-.submit:hover, .submit:focus{
-    background-color: green;
-    color: white;
-    border-radius:15px;border:5px solid black;
-    padding: 10px; 
-    font-size: 16px;
-}
-
-.reset:hover, .reset:focus{
-    background-color: green;
-    color: white;
-    border-radius:15px;border:5px solid black;
-    padding: 10px; 
-    font-size: 16px;
-}
-
-</style>
 <form method="post" action="EditUser_action.jsp" name="EditUser">
 
 <%
 String anyErrors = request.getParameter("Error");
+String msg = request.getParameter("Message");
 if(anyErrors!=null && anyErrors.equals("-1")){
 	out.println("The first name is empty.<br>");
 }
@@ -44,6 +27,9 @@ if(anyErrors!=null && anyErrors.equals("-2")){
 }
 if(anyErrors!=null && anyErrors.equals("-3")){
 	out.println("The password is empty.<br>");
+}
+if(msg !=null && msg.equals("1")){
+	out.println("Your account has been successfully updated.<br>");
 }
 %>
 

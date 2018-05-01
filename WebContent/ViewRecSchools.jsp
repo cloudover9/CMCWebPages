@@ -1,7 +1,7 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
 <%@include file="verifyLogin.jsp"%>
 <%@include file= "TranslateFeature.jsp" %>
-<%@include file= "GeneralUserMenu.jsp" %>
+<%@include file= "GeneralUserMenu2.jsp" %>
 
 <html>
 <head>

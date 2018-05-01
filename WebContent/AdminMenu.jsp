@@ -110,31 +110,5 @@ input[type=reset]:hover {
     }    
 </style>
 
-<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span> -->
-<!-- </head> -->
-<!-- <body> -->
-
-
-
-<!-- <div id="mySidenav" class="sidenav"> -->
-<!--   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
-<!--   <a href="AdminHomepage.jsp">Home</a> -->
-<!--   <a href="ManageUniversities.jsp">Manage Universities</a> -->
-<!--   <a href="ManageUsers.jsp">Manage Users</a> -->
-<!--   <br><br> -->
-<!--   <a href="#">Logout</a> -->
-<!-- </div> -->
-
-<!-- <script> -->
-<!-- // function openNav() { -->
-<!-- //     document.getElementById("mySidenav").style.width = "250px"; -->
-<!-- //     document.getElementById("main").style.marginLeft = "250px"; -->
-<!-- // } -->
-
-<!-- // function closeNav() { -->
-<!-- //     document.getElementById("mySidenav").style.width = "0"; -->
-<!-- //     document.getElementById("main").style.marginLeft= "0"; -->
-<!-- // } -->
-<!-- </script> -->
 </body>
 </html>
