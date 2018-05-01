@@ -53,7 +53,6 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="ManageSchool" class="tabcontent">
   <h3>Manage Saved Schools </h3>
-  <p>Navigate to the link below</p>
   <a href="ManageSavedSchools2.jsp" target="_self">Manage My Saved Schools</a>
   
 </div>

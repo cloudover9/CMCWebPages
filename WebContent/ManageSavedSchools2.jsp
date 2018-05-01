@@ -4,7 +4,7 @@
 <html>
 
 <%@include file= "GeneralUserMenu2.jsp" %>
-<%@include file= "GeneralUserMenu.jsp" %>
+
 <%
 UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
 GeneralUser gu = ufc.getCurrentGeneralUser();
