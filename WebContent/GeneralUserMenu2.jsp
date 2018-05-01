@@ -27,10 +27,8 @@ body {font-family: "Helvetica", sans-serif;}
 }
 
 .tablink:hover, .tablink:focus {
-    background-color: green;
-    color: white;
     border-radius:15px;border:5px solid black;
-    padding: 10px; 
+    padding: 15px;
 }
 
 /* Style the tab content */

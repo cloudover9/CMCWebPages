@@ -23,11 +23,11 @@
 // 	}
 	else if(loginStatus==1){
 		session.setAttribute("AdminController", new AdminFuncController(username));
-		response.sendRedirect("AdminHomepage.jsp");
+		response.sendRedirect("AdminHomepage2.jsp");
 	}
 	else if(loginStatus==2){
 		session.setAttribute("UserController", new UserFuncController(username));
-		response.sendRedirect("GeneralUserHomepage.jsp");
+		response.sendRedirect("GeneralUserHomepage2.jsp");
 	}
 	
 %>

@@ -44,7 +44,6 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="main">
 
-  
 </div>
 
 <div id="ManageSchool" class="tabcontent">

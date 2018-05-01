@@ -97,7 +97,7 @@ body {font-family: "Helvetica", sans-serif;}
     
 }
 
-.theSidebar options:focus {
+.theSidebar ww3-bar-item w3-button:focus {
     border-radius:15px;border:5px solid black;
     padding: 10px; 
     font-size: 18px;
@@ -117,7 +117,8 @@ body {font-family: "Helvetica", sans-serif;}
 	border-radius:15px;border:5px solid black;
 }
 
-.main:focus {
+/* the symbol right */
+.w3-grey openNav:focus {
     border-radius:15px;border:5px solid red;
     padding: 16px; 
    
@@ -134,12 +135,12 @@ body {font-family: "Helvetica", sans-serif;}
 <!-- "ww3-bar-item w3-button"  instead of options -->
 
 <div class="theSidebar" style="display:none" id="mySidebar">
-  <button  class="options" onclick="w3_close()" tabindex="1" accesskey="c">Close &times;</button> <br>
+  <button  class="w3-bar-item w3-button w3-large" onclick="w3_close()" tabindex="1" accesskey="c">Close &times;</button> <br>
   
-  <a style="font-size:18px" href="AdminHomepage2.jsp"     class="options"  tabindex="2" accesskey="a">Visit Homepage</a>      <br>
-  <a style="font-size:18px" href="ManageUniversities.jsp" class="options"  tabindex="3" accesskey="s">Manage Universities</a> <br>
-  <a style="font-size:18px" href="ManageUsers.jsp"        class="options"  tabindex="4" accesskey="d">Manage Users</a>        <br>
-  <a style="font-size:18px" href="Logout_action.jsp"      class="options"  tabindex="5" accesskey="q">Logout of System</a>     <br>
+  <a style="font-size:18px" href="AdminHomepage2.jsp"     class="ww3-bar-item w3-button"  tabindex="2" accesskey="a">Visit Homepage</a>      <br>
+  <a style="font-size:18px" href="ManageUniversities.jsp" class="ww3-bar-item w3-button"  tabindex="3" accesskey="s">Manage Universities</a> <br>
+  <a style="font-size:18px" href="ManageUsers.jsp"        class="ww3-bar-item w3-button"  tabindex="4" accesskey="d">Manage Users</a>        <br>
+  <a style="font-size:18px" href="Logout_action.jsp"      class="ww3-bar-item w3-button"  tabindex="5" accesskey="q">Logout of System</a>     <br>
 </div>
 
 <div id="main">
