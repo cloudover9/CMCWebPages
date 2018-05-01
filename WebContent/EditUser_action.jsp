@@ -15,7 +15,6 @@
 		response.sendRedirect("EditUser.jsp?Error=-3");
 	}
 	else{
-		response.sendRedirect("EditUser.jsp");
 		response.sendRedirect("EditUser.jsp?Message=1");
 	}
 %>
