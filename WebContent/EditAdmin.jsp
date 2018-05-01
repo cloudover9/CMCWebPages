@@ -79,7 +79,7 @@ if(anyErrors!=null && anyErrors.equals("-3")){
       </tr>
     </tbody>
   </table>
-  <input name="Edit User" value="Edit User" type="submit" class="submit"> 
+  <input name="Submit Changes" value="Submit Changes" type="submit" class="submit"> 
  
   <input name="Reset" value="Reset" type="reset" class="reset"><br>
 </form>
