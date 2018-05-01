@@ -19,15 +19,16 @@ body {font-family: "Helvetica", sans-serif;}
     color: white;
     float: left;
     border: none;
-    outline: none;
-    cursor: pointer;
+    /* outline: none;*/
+    /* cursor: pointer; */
     padding: 14px 16px;
     font-size: 17px;
     width: 25%;
 }
 
-.tablink:hover {
-    background-color: #525252;
+.tablink:hover, .tablink:focus {
+    border-radius:15px;border:5px solid black;
+    padding: 15px;
 }
 
 /* Style the tab content */
@@ -39,6 +40,14 @@ body {font-family: "Helvetica", sans-serif;}
     text-align: center;
 }
 
+
+.mySidebar:focus {
+ 	background-color: green;
+    color: white;
+    border-radius:15px;border:5px solid black;
+    padding: 10px; 
+}
+
 #Search {background-color:#FF6347;}
 #ManageSchool {background-color:#00B300;}
 #ManageP {background-color:#0077fb;}
@@ -47,13 +56,13 @@ body {font-family: "Helvetica", sans-serif;}
 <body>
 
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-  <button  class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-  
-  <a style="font-size:18px" href="GeneralUserHomepage.jsp" class="w3-bar-item w3-button">Home</a>
-  <a style="font-size:18px" href="SearchMenu.jsp"          class="w3-bar-item w3-button">Search</a>
-  <a style="font-size:18px" href="ManageSavedSchools2.jsp" class="w3-bar-item w3-button">Manage Saved Schools</a>
-  <a style="font-size:18px" href="EditUser.jsp"            class="w3-bar-item w3-button">Manage Profile</a>
-  <a style="font-size:18px" href="Logout_action.jsp"       class="w3-bar-item w3-button">Logout</a>
+
+  <button  class="w3-bar-item w3-button w3-large" onclick="w3_close()" tabindex="1">Close &times;</button>
+  <a style="font-size:18px" href="GeneralUserHomepage.jsp" class="w3-bar-item w3-button" tabindex="2">Visit Homepage</a>
+  <a style="font-size:18px" href="SearchMenu.jsp"          class="w3-bar-item w3-button" tabindex="3">Search for Schools</a>
+  <a style="font-size:18px" href="ManageSavedSchools2.jsp" class="w3-bar-item w3-button" tabindex="4">Manage Saved Schools</a>
+  <a style="font-size:18px" href="EditUser.jsp"            class="w3-bar-item w3-button" tabindex="5">Manage Profile</a>
+  <a style="font-size:18px" href="Logout_action.jsp"       class="w3-bar-item w3-button" tabindex="6">Logout of System</a>
 </div>
 
 <div id="main">

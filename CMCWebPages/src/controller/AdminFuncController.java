@@ -61,31 +61,11 @@ public class AdminFuncController {
 	public ArrayList<University> getAllUniversities() {
 		return dbc.getUniversities();
 	}
-
-//	/**
-//	 * View the university's details
-//	 * 
-//	 * @param univName
-//	 *            the name of the university
-//	 */
-//	public void viewUniversityDetails(String univName) {
-//		University u = dbc.getUniversity(univName);
-//		System.out.println("=======================================" + '\n' + '\t' + univName + " Details" + '\n'
-//				+ "=======================================" + '\n' + "State: " + u.getState() + '\n' + "Location: "
-//				+ u.getLocation() + '\n' + "Control: " + u.getControl() + '\n' + "# of Students: " + u.getStudents()
-//				+ '\n' + "% Females: " + u.getFemPerc() + '\n' + "SAT Verbal: " + u.getSatV() + '\n' + "SAT Math: "
-//				+ u.getSatM() + '\n' + "Expenses: " + u.getCost() + '\n' + "% with Financial Aid: " + u.getFinAidPerc()
-//				+ '\n' + "# of Applicants: " + u.getApplicants() + '\n' + "% Admitted: " + u.getAdmitted() + '\n'
-//				+ "% Enrolled: " + u.getEnrolled() + '\n' + "Academic Scale (1-5): " + u.getAcadScale() + '\n'
-//				+ "Social Scale (1-5): " + u.getSocScale() + '\n' + "Quality of Life Scale (1-5): " + u.getQualScale());
-//		ArrayList<String> emphases = u.getEmphases();
-//		System.out.println("Emphases:");
-//		for (String emphasis : emphases) {
-//			System.out.println('\t' + emphasis);
-//		}
-//		// viewUniversities();
-//	}
-
+	
+	public Admin getCurrentAdmin()
+	{
+		return this.admin;
+	}
 	/**
 	 * Accesses the Database and saves changes made to an account
 	 * 

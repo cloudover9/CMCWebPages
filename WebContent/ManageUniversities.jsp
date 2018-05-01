@@ -1,7 +1,7 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
 <%@include file="verifyLogin.jsp"%>
 <%@include file= "TranslateFeature.jsp" %>
-<%@include file= "AdminMenu.jsp" %><br>
+<%@include file= "AdminMenu2.jsp" %><br>
 <%
 	AdminFuncController afc = (AdminFuncController)session.getAttribute("AdminController");
 	ArrayList<University> allUnivs = afc.getAllUniversities();
@@ -21,16 +21,23 @@
   z-index: 99;
   font-size: 18px;
   border: none;
-  outline: none;
+  /* outline: none; */
   background-color: red;
   color: white;
-  cursor: pointer;
+  /* cursor: pointer; */
   padding: 15px;
   border-radius: 4px;
 }
 
-#myBtn:hover {
+#myBtn:hover, #myBtn:focus {
   background-color: #555;
+  border-radius:15px;border:5px solid black;
+  padding: 10px; 
+}
+
+#addLink:hover, #addLink:focus {
+  border-radius:15px;border:5px solid black;
+  padding: 10px; 
 }
 </style>
 <body>
@@ -40,7 +47,7 @@
     <tr>
       <td style="vertical-align: top;" colspan="17">
       	<div style="text-align: center;">
-      		<a href="AddUniversity.jsp" target="_self">Add a New University</a>
+      		<a style="font-size:18px" href="AddUniversity.jsp" target="_self" class="addLink">Add a New University</a>
       	</div>
       </td>
     </tr>
@@ -146,7 +153,9 @@
 <br>
 
 <br>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!--Press Alt+Shift+t to access this button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top" accesskey="t">Top</button>
 
 
 

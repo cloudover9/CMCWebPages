@@ -68,10 +68,10 @@ body {font-family: "Helvetica", sans-serif;}
     <a href="Logout_action.jsp" target="_self">Logout </a>
 </div>
 
-<button class="tablink" onclick="openTab('Search', this, '#FF6347')" id="defaultOpen">Search for A School</button>
-<button class="tablink" onclick="openTab('ManageSchool', this, 'green')">Manage My Saved Schools</button>
-<button class="tablink" onclick="openTab('ManageP', this, '#0077fb')">Manage My Profile</button>
-<button class="tablink" onclick="openTab('Logout', this, 'orange')">Logout of CMC System</button>
+<button style="font-size:18px" class="tablink" onclick="openTab('Search', this, '#FF6347')" id="defaultOpen">Search for A School</button>
+<button style="font-size:18px" class="tablink" onclick="openTab('ManageSchool', this, 'green')">Manage My Saved Schools</button>
+<button style="font-size:18px" class="tablink" onclick="openTab('ManageP', this, '#0077fb')">Manage My Profile</button>
+<button style="font-size:18px" class="tablink" onclick="openTab('Logout', this, 'orange')">Logout of CMC System</button>
 
 <script>
 function openTab(tabName,elmnt,color) {

@@ -1,7 +1,7 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
 <%@include file="verifyLogin.jsp"%>
 <%@include file= "TranslateFeature.jsp" %>
-<%@include file= "AdminMenu.jsp" %><br>
+<%@include file= "AdminMenu2.jsp" %><br>
 <%
 	AdminFuncController afc = (AdminFuncController)session.getAttribute("AdminController");
 	ArrayList<Account> allAccounts = afc.getAllAccounts();
@@ -12,6 +12,15 @@
 <head>
 <title>ManageUsers</title>
 </head>
+<style>
+
+
+#addUser:hover, #addUser:focus {
+  border-radius:15px;border:5px solid black;
+  padding: 10px;
+}
+
+</style>
 
 <body>
 	<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
@@ -19,7 +28,7 @@
 			<tr>
 				<td style="vertical-align: top;" colspan="8">
 				<div style="text-align: center;">
-					<a href="AddAccount.jsp" target="_self">Add New User</a><br>
+					<a href="AddAccount.jsp" target="_self" class= "addUser">Add New User</a><br>
 				</div>
 				</td>
 			</tr>

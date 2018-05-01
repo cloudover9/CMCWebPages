@@ -1,28 +1,27 @@
 <%@include file="verifyLogin.jsp"%>
 <%@include file= "TranslateFeature.jsp" %>
-<%@include file= "AdminMenu.jsp" %><br>
+<br>
 <html>
-
-
 <head>
+
 <style>
 body {font-family: "Helvetica", sans-serif;}
 
 .tablink {
-    background-color: #555;
+    background-color: #454545;
     color: white;
     float: left;
     border: none;
     outline: none;
-    
     cursor: pointer;
     padding: 14px 16px;
-    font-size: 17px;
-    width: 33%;
+    font-size: 18px;
+    width: 25%;
 }
 
-.tablink:hover {
-    background-color: #777;
+.tablink:hover, .tablink:focus {
+    border-radius:15px;border:5px solid black;
+    padding: 15px;
 }
 
 /* Style the tab content */
@@ -30,14 +29,14 @@ body {font-family: "Helvetica", sans-serif;}
     color: white;
     display: none;
     padding: 50px;
-    
     text-align: center;
 }
 
 
-#ManageSchool {background-color:red;}
-#ManageUser {background-color:green;}
-#Logout {background-color:orange;}
+#ManageSchool {background-color:#FF6347;}
+#ManageUser {background-color:#00B300;}
+#ManageProfile{background-color:cyan}
+#Logout {background-color:#0077fb;}
 </style>
 </head>
 
@@ -46,35 +45,37 @@ body {font-family: "Helvetica", sans-serif;}
 
 <div id="main">
 
-  
 </div>
 
 <div id="ManageSchool" class="tabcontent">
   <h3>Manage Universities </h3>
-  <a href="ManageUniversities.jsp" target="_self">Manage Universities</a>
-  
+  <a style="font-size:18px" href="ManageUniversities.jsp" target="_self">Manage Universities</a>
 </div>
 
 <div id="ManageUser" class="tabcontent">
   <h3>Manage Users </h3>
-  <a href="ManageUsers.jsp" target="_self">Manage Users</a>
-  
+  <a style="font-size:18px" href="ManageUsers.jsp" target="_self">Manage Users</a>
+</div>
+
+<div id="ManageProfile" class="tabcontent">
+  <h3>Manage Profile </h3>
+  <a style="font-size:18px" href="EditAdmin.jsp" target="_self">Manage Profile</a>
 </div>
 
 
 <div id="Logout" class="tabcontent">
   <h3>Logout</h3>
-    <a href="Logout_action.jsp" target="_self">Logout </a>
+    <a style="font-size:18px"  href="Logout_action.jsp" target="_self">Logout of CMC System </a>
 </div>
 
-
-
-<button class="tablink" onclick="openCity('ManageSchool', this, 'red')" id="defaultOpen">Manage Universities</button>
-<button class="tablink" onclick="openCity('ManageUser', this, 'green')">Manage Users</button>
-<button class="tablink" onclick="openCity('Logout', this, 'orange')">Logout of CMC System</button>
+<!--old colors were #FF6347,  #00B300, #0077fb -->
+<button class="tablink" onclick="openTab('ManageSchool', this, '#454545')" id="defaultOpen">Manage Universities</button>
+<button class="tablink" onclick="openTab('ManageUser', this, '#454545')">Manage Users</button>
+<button class="tablink" onclick="openTab('ManageProfile', this, '#454545')">Manage Profile</button>
+<button class="tablink" onclick="openTab('Logout', this, '#454545')">Logout of CMC System</button>
 
 <script>
-function openCity(cityName,elmnt,color) {
+function openTab(tabName,elmnt,color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -84,11 +85,11 @@ function openCity(cityName,elmnt,color) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
     elmnt.style.backgroundColor = color;
 
 }
-// Get the element with id="defaultOpen" and click on it
+
 document.getElementById("defaultOpen").click();
 </script>
 
