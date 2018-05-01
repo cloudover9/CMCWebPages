@@ -253,26 +253,26 @@ public class AdminFuncController {
 			u.setControl(control);
 		}
 		// students must be an integer; cannot be negative
-		if (students < 0) {
+		if (students < -1) {
 			//throw new IllegalArgumentException("Error: The number of students is not in range.");
 			return -4;
 		}
 		u.setStudents(students);
 		// femPerc must be an integer between 0 and 100
-		if (femPerc < 0 || femPerc > 100) {
+		if (femPerc < -1 || femPerc > 100) {
 			//throw new IllegalArgumentException("Error: The female percentage must be between 0 and 100.");
 			return -4;
 		}
 		u.setFemPerc(femPerc);
 		// SATV must be between 0 and 800
-		if (satv < 0 || satv > 800) {
+		if (satv < -1 || satv > 800) {
 			
 			//throw new IllegalArgumentException("Error: The SAT verbal score must be between 0 and 800.");
 			return -4;
 		}
 		u.setSatV(satv);
 		// SATM must be between 0 and 800
-		if (satm < 0 || satm > 800) {
+		if (satm < -1 || satm > 800) {
 			
 			//throw new IllegalArgumentException("Error: The SAT math score must be between 0 and 800");
 			return -4;
@@ -286,14 +286,14 @@ public class AdminFuncController {
 		}
 		u.setCost(cost);
 		// financial aid must be between 0 and 100
-		if (finAidPerc < 0 || finAidPerc > 100) {
+		if (finAidPerc < -1 || finAidPerc > 100) {
 			
 			//throw new IllegalArgumentException("Error: The financial aid percentage must be between 0 and 100.");
 			return -4;
 		}
 		u.setFinAidPerc(finAidPerc);
 		// applicants must be an integer; cannot be negative
-		if (applicants < 0) {
+		if (applicants < -1) {
 			
 			//throw new IllegalArgumentException("Error: The number of applicants is not in range.");
 			return -4;
@@ -307,28 +307,28 @@ public class AdminFuncController {
 		}
 		u.setAdmitted(admitted);
 		// enrolled must be between 0 and 100
-		if (enrolled < 0 || enrolled > 100) {
+		if (enrolled < -1 || enrolled > 100) {
 			
 			//throw new IllegalArgumentException("Error: The enrolled percentage is not in range.");
 			return -4;
 		}
 		u.setEnrolled(enrolled);
 		// acadScale must be between 1 and 5
-		if (acadScale < 1 || acadScale > 5) {
+		if (acadScale < -1 || acadScale > 5) {
 			
 			//throw new IllegalArgumentException("Error: The academic scale must be between 1 and 5");
 			return -4;
 		}
 		u.setAcadScale(acadScale);
 		// socScale must be between 1 and 5
-		if (socScale < 1 || socScale > 5) {
+		if (socScale < -1 || socScale > 5) {
 			
 			//throw new IllegalArgumentException("Error: The social scale must be between 1 and 5.");
 			return -4;
 		}
 		u.setSocScale(socScale);
 		// qualScale must be between 1 and 5
-		if (qualScale < 1 || qualScale > 5) {
+		if (qualScale < -1 || qualScale > 5) {
 			
 			//throw new IllegalArgumentException("Error: The quality scale must be between 1 and 5.");
 			return -4;
