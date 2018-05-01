@@ -12,31 +12,34 @@ body {font-family: "Helvetica", sans-serif;}
     color: white;
     float: left;
     border: none;
-    outline: none;
-    cursor: pointer;
+   /* outline: none; */
+   /*  cursor: pointer; */
     padding: 14px 16px;
     font-size: 18px;
     width: 25%;
 }
 
-.tablink:hover, .tablink:focus {
+.tablink:hover, .tablink:focus , a:focus{
    border:5px solid black;
     padding: 15px;
 }
 
 /* Style the tab content */
 .tabcontent {
-    color: white;
+    color: black;
     display: none;
     padding: 50px;
     text-align: center;
 }
 
+a {
+color: #3344dd;
+}
 
-#ManageSchool {background-color:#FF6347;}
-#ManageUser {background-color:#00B300;}
+#ManageSchool {background-color:#FFC2C2;}
+#ManageUser {background-color:#94FF94;}
 #ManageProfile{background-color:cyan}
-#Logout {background-color:#0077fb;}
+#Logout {background-color:#FFC861;}
 </style>
 </head>
 

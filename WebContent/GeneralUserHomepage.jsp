@@ -24,21 +24,22 @@ body {font-family: "Helvetica", sans-serif;}
 .tablink:hover, .tablink:focus {
    border:5px solid black;
     padding: 15px;
+   
 }
 
 /* Style the tab content */
 .tabcontent {
-    color: white;
+    color: black;
     display: none;
     padding: 50px;
     text-align: center;
 }
 
 
-#Search {background-color:#FF6347;}
-#ManageSchool {background-color:#00B300;}
-#ManageP {background-color:#0077fb;}
-#Logout {background-color:orange;}
+#Search {background-color:#FFC2C2;}
+#ManageSchool {background-color:#94FF94;}
+#ManageP {background-color:cyan;}
+#Logout {background-color:#FFC861;}
 </style>
 </head>
 <body>
@@ -70,10 +71,10 @@ body {font-family: "Helvetica", sans-serif;}
     <a href="Logout_action.jsp" target="_self">Logout </a>
 </div>
 
-<button style="font-size:18px" class="tablink" onclick="openTab('Search', this, '#FF6347')" id="defaultOpen">Search for A School</button>
-<button style="font-size:18px" class="tablink" onclick="openTab('ManageSchool', this, 'green')">Manage My Saved Schools</button>
-<button style="font-size:18px" class="tablink" onclick="openTab('ManageP', this, '#0077fb')">Manage My Profile</button>
-<button style="font-size:18px" class="tablink" onclick="openTab('Logout', this, 'orange')">Logout of CMC System</button>
+<button style="font-size:18px" class="tablink" onclick="openTab('Search', this, '#454545')" id="defaultOpen">Search for A School</button>
+<button style="font-size:18px" class="tablink" onclick="openTab('ManageSchool', this, '#454545')">Manage My Saved Schools</button>
+<button style="font-size:18px" class="tablink" onclick="openTab('ManageP', this, '#454545')">Manage My Profile</button>
+<button style="font-size:18px" class="tablink" onclick="openTab('Logout', this, '#454545')">Logout of CMC System</button>
 
 
 <script>
