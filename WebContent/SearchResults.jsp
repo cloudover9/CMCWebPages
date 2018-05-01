@@ -56,29 +56,29 @@
 			return;
 	}
 	
-	int students1=0;
+	int students1=-1;
 	int students2=0;
-	int femPerc1=0;
+	int femPerc1=-1;
 	int femPerc2=0;
-	int satV1=0;
+	int satV1=-1;
 	int satV2=0;
-	int satM1=0;
+	int satM1=-1;
 	int satM2=0;
-	int cost1=0;
+	int cost1=-1;
 	int cost2=0;
-	int finAidPerc1=0;
+	int finAidPerc1=-1;
 	int finAidPerc2=0;
-	int applicants1=0;
+	int applicants1=-1;
 	int applicants2=0;
-	int admitted1=0;
+	int admitted1=-1;
 	int admitted2=0;
-	int enrolled1=0;
+	int enrolled1=-1;
 	int enrolled2=0;
-	int acadScale1=0;
+	int acadScale1=-1;
 	int acadScale2=0;
-	int socScale1=0;
+	int socScale1=-1;
 	int socScale2=0;
-	int qualScale1=0;
+	int qualScale1=-1;
 	int qualScale2=0;
 	//set the inputs from the user
 	try{
@@ -131,7 +131,7 @@
 	//CHECK FOR ERRORS, RETURN NULL IF THERE IS AN ERROR
 	  // the low variables are negative
 	  if(students1<0 || femPerc1<0 || satV1<0 || satM1<0 || cost1<0 || finAidPerc1<0 || applicants1<0 || admitted1<0 || enrolled1<0
-			  || acadScale1<1 || socScale1<1 || qualScale1<1) {
+			  || acadScale1<0 || socScale1<0|| qualScale1<0) {
 		  response.sendRedirect("SearchMenu.jsp?Error=-2");
 	  }
 	  // the high variables are less than the low variables
