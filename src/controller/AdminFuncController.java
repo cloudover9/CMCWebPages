@@ -487,6 +487,10 @@ public class AdminFuncController {
 			//S3
 			return false;
 		}
-
 	}
+	
+	public void updateAdmin(Admin newAdmin)
+	  {
+	   admin = newAdmin;
+	  }
 }
