@@ -56,13 +56,11 @@ body {font-family: "Helvetica", sans-serif;}
 <div id="ManageSchool" class="tabcontent">
   <h3>Manage Saved Schools </h3>
   <a href="ManageSavedSchools2.jsp" target="_self">Manage Saved Schools</a>
-  
 </div>
 
 <div id="ManageP" class="tabcontent">
   <h3>Manage My Profile </h3>
   <a href="EditUser.jsp" target="_self">Manage My Profile</a>
-  
 </div>
 
 
