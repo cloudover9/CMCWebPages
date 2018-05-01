@@ -16,7 +16,7 @@ body {font-family: "Helvetica", sans-serif;}
     cursor: pointer;
     padding: 14px 16px;
     font-size: 18px;
-    width: 33%;
+    width: 25%;
 }
 
 .tablink:hover, .tablink:focus {
@@ -35,6 +35,7 @@ body {font-family: "Helvetica", sans-serif;}
 
 #ManageSchool {background-color:#FF6347;}
 #ManageUser {background-color:#00B300;}
+#ManageProfile{background-color:cyan}
 #Logout {background-color:#0077fb;}
 </style>
 </head>
@@ -56,15 +57,21 @@ body {font-family: "Helvetica", sans-serif;}
   <a style="font-size:18px" href="ManageUsers.jsp" target="_self">Manage Users</a>
 </div>
 
+<div id="ManageProfile" class="tabcontent">
+  <h3>Manage Profile </h3>
+  <a style="font-size:18px" href="EditAdmin.jsp" target="_self">Manage Profile</a>
+</div>
+
 
 <div id="Logout" class="tabcontent">
   <h3>Logout</h3>
-    <astyle="font-size:18px"  href="Logout_action.jsp" target="_self">Logout of CMC System </a>
+    <a style="font-size:18px"  href="Logout_action.jsp" target="_self">Logout of CMC System </a>
 </div>
 
 <!--old colors were #FF6347,  #00B300, #0077fb -->
 <button class="tablink" onclick="openTab('ManageSchool', this, '#454545')" id="defaultOpen">Manage Universities</button>
 <button class="tablink" onclick="openTab('ManageUser', this, '#454545')">Manage Users</button>
+<button class="tablink" onclick="openTab('ManageProfile', this, '#454545')">Manage Profile</button>
 <button class="tablink" onclick="openTab('Logout', this, '#454545')">Logout of CMC System</button>
 
 <script>

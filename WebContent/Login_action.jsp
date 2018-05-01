@@ -27,7 +27,7 @@
 	}
 	else if(loginStatus==2){
 		session.setAttribute("UserController", new UserFuncController(username));
-		response.sendRedirect("GeneralUserHomepage2.jsp");
+		response.sendRedirect("GeneralUserHomepage.jsp");
 	}
 	
 %>
