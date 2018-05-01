@@ -23,7 +23,7 @@
 // 	}
 	else if(loginStatus==1){
 		session.setAttribute("AdminController", new AdminFuncController(username));
-		response.sendRedirect("AdminHomepage2.jsp");
+		response.sendRedirect("AdminHomepage.jsp");
 	}
 	else if(loginStatus==2){
 		session.setAttribute("UserController", new UserFuncController(username));

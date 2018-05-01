@@ -1,7 +1,8 @@
 <%@include file="verifyLogin.jsp"%>
-<html>
 <%@include file= "TranslateFeature.jsp" %>
-<%@include file= "AdminMenu.jsp" %><br>
+<%@include file= "AdminMenu2.jsp" %><br>
+
+<html>
 <head>
 <title>AddUniversity</title>
 </head>

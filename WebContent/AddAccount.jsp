@@ -1,10 +1,11 @@
 <%@include file="verifyLogin.jsp"%>
+<%@include file= "TranslateFeature.jsp" %>
+<%@include file= "AdminMenu2.jsp" %><br>
+
 <html><head>
 <title>AddAccount</title>
-
-<%@include file= "TranslateFeature.jsp" %>
-<%@include file= "AdminMenu.jsp" %><br>
 </head><body>
+
 <form method="post" action="AddAccount_action.jsp" name="AddAccount">
 
 <%

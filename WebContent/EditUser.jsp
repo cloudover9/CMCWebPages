@@ -1,18 +1,37 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
 <%@include file="verifyLogin.jsp"%>
 <%@include file= "TranslateFeature.jsp" %>
+<%@include file= "GeneralUserMenu2.jsp" %>
 <%
 	UserFuncController ufc = (UserFuncController)session.getAttribute("UserController"); 
 	GeneralUser gu = ufc.getCurrentGeneralUser();
 %>
 <html>
-
 <head>
-<%@include file= "GeneralUserMenu2.jsp" %>
-<%@include file= "GeneralUserMenu.jsp" %>
 <title>EditUser</title> 
 </head>
 
+
+
+<style>
+
+.submit:hover, .submit:focus{
+    background-color: green;
+    color: white;
+    border-radius:15px;border:5px solid black;
+    padding: 10px; 
+    font-size: 16px;
+}
+
+.reset:hover, .reset:focus{
+    background-color: green;
+    color: white;
+    border-radius:15px;border:5px solid black;
+    padding: 10px; 
+    font-size: 16px;
+}
+
+</style>
 <form method="post" action="EditUser_action.jsp" name="EditUser">
 
 <%
@@ -60,9 +79,9 @@ if(anyErrors!=null && anyErrors.equals("-3")){
       </tr>
     </tbody>
   </table>
-  <input name="Edit User" value="Edit User" type="submit"> 
+  <input name="Edit User" value="Edit User" type="submit" class="submit"> 
  
-  <input name="Reset" value="Reset" type="reset"><br>
+  <input name="Reset" value="Reset" type="reset" class="reset"><br>
 </form>
 
 </body>

@@ -6,8 +6,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+
+<style>
+
+.translate:focus {
+	border-radius:15px;border:5px solid black;
+    padding: 10px; 
+    font-size: 17px;
+}
+
+</style>
+
 <% //Code below is a Google Translate feature.   %>
-<div id="google_translate_element"></div><script type="text/javascript">
+<div id="google_translate_element"></div><script type="text/javascript"  class="translate">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }

@@ -4,7 +4,6 @@
 <%@include file= "TranslateFeature.jsp" %>
 <head>
 <%@include file= "GeneralUserMenu2.jsp" %>
-<%@include file= "GeneralUserMenu.jsp" %>
 <title>SearchMenu</title>
 </head>
 

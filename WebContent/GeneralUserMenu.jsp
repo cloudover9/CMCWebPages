@@ -11,6 +11,7 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -43,16 +44,6 @@ body {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
 }
 
 input[type=submit] {

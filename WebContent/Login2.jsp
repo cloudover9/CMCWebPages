@@ -52,8 +52,10 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover , input[type=submit]:focus{
     background-color: #45a049;
+    border-radius:15px;border:5px solid black;
+    padding: 10px; 
 }
 
 input[type=reset] {
@@ -72,14 +74,16 @@ input[type=reset] {
     cursor: pointer;
 }
 
-input[type=reset]:hover {
+input[type=reset]:hover, input[type=reset]:focus {
     background-color: #45a049;
+    border-radius:15px;border:5px solid black;
+    padding: 10px; 
 }
 
 .alert {
     padding: 20px;
     background-color: #f44336;
-    color: white;
+    color: black;
 }
 
 .closebtn {
@@ -93,13 +97,13 @@ input[type=reset]:hover {
     transition: 0.3s;
 }
 
-.closebtn:hover {
+.closebtn:hover, .closebtn:focus {
     color: black;
+    border-radius:15px;border:5px solid black;
+    padding: 10px;
 }
 
 </style>
-
-
 
 <h3 style= "background-color: rgb(95, 95, 95); color:white; text-align: center; border-radius: 4px;"> <br> Welcome to CMC! <br><br> </h3>
 
@@ -145,15 +149,14 @@ if(anyErrors!=null && anyErrors.equals("-6")){%>
 
 <div>
   <form action="Login_action.jsp" method="post" name="Login">
-    <label for="fname">Username</label>
-    <input type="username" id="fname" name="Username">
+    <label style="font-size:18px" for="fname">Username</label>
+    <input style="font-size:18px" type="username" id="fname" name="Username">
 
-    <label for="lname">Password</label>
-    <input type="password" id="lname" name="Password">
-  
-  	
-    <input style="font-size:16px" type="submit" alt= "Submit Login Credentials" value="Submit">
-   <input  style="font-size:16px" type="reset" alt= "Reset Login Credentials" value="Reset"  name=Reset>
+    <label style="font-size:18px" for="lname">Password</label>
+    <input style="font-size:18px" type="password" id="lname" name="Password">
+    	
+    <input style="font-size:18px" type="submit" alt= "Submit Login Credentials" value="Submit">
+   <input  style="font-size:18px" type="reset" alt= "Reset Login Credentials" value="Reset"  name=Reset>
   </form>
 </div>
 

@@ -16,7 +16,7 @@ ArrayList<String> allSavedSchoolNames = gu.getSavedSchools();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
+body {font-family: "Helvetica";}
 
 /* Style the tab */
 .tab {
@@ -35,21 +35,26 @@ body {font-family: "Lato", sans-serif;}
     padding: 22px 16px;
     width: 100%;
     border: none;
-    outline: none;
+    /* outline: none; */
     text-align: left;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 0.3s;
     font-size: 17px;
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tab button:hover, .tab button:focus {
     background-color: #ddd;
+    border-radius:15px;border:5px solid black;
+    padding: 10px; 
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: green;
+    color: white;
+    border-radius:15px;border:5px solid black;
+    padding: 10px; 
 }
 
 /* Style the tab content */
@@ -61,6 +66,10 @@ body {font-family: "Lato", sans-serif;}
     height: 100%;
 }
 
+.remove:focus{
+    border-radius:15px;border:5px solid black;
+    padding: 10px; 
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -222,7 +231,7 @@ boolean first = true;
   </tbody>
 </table>
 <form method="post" action="RemoveSavedSchool_action.jsp" name="RemoveSavedSchool">
-      		<input name="Remove" value="Remove" type="submit">
+      		<input name="Remove" value="Remove" type="submit" class= "remove">
       		<input name="SchoolName" value="<%=schoolName%>" type="hidden"><br>
       </form>
 </div>
