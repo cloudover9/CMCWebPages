@@ -114,12 +114,12 @@ input[type=reset]:hover ,  input[type=reset]:focus{
 
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
 
-  <button  class="w3-bar-item w3-button w3-large" onclick="w3_close()" tabindex="1">Close &times;</button>
-  <a style="font-size:18px" href="GeneralUserHomepage.jsp" class="w3-bar-item w3-button" tabindex="2">Visit Homepage</a>
-  <a style="font-size:18px" href="SearchMenu.jsp"          class="w3-bar-item w3-button" tabindex="3">Search for Schools</a>
-  <a style="font-size:18px" href="ManageSavedSchools2.jsp" class="w3-bar-item w3-button" tabindex="4">Manage Saved Schools</a>
-  <a style="font-size:18px" href="EditUser.jsp"            class="w3-bar-item w3-button" tabindex="5">Manage Profile</a>
-  <a style="font-size:18px" href="Logout_action.jsp"       class="w3-bar-item w3-button" tabindex="6">Logout of System</a>
+  <button  class="w3-bar-item w3-button w3-large" onclick="w3_close()" tabindex="1" accesskey="c">Close &times;</button>
+  <a style="font-size:18px" href="GeneralUserHomepage.jsp" class="w3-bar-item w3-button" tabindex="2" accesskey="a">Visit Homepage</a>
+  <a style="font-size:18px" href="SearchMenu.jsp"          class="w3-bar-item w3-button" tabindex="3" accesskey="s" >Search for Schools</a>
+  <a style="font-size:18px" href="ManageSavedSchools2.jsp" class="w3-bar-item w3-button" tabindex="4" accesskey="m" >Manage Saved Schools</a>
+  <a style="font-size:18px" href="EditUser.jsp"            class="w3-bar-item w3-button" tabindex="5" accesskey="p">Manage Profile</a>
+  <a style="font-size:18px" href="Logout_action.jsp"       class="w3-bar-item w3-button" tabindex="6" accesskey="q" >Logout of System</a>
 </div>
 
 <div id="main">

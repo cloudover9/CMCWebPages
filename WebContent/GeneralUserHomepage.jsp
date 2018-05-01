@@ -76,7 +76,6 @@ body {font-family: "Helvetica", sans-serif;}
 <button style="font-size:18px" class="tablink" onclick="openTab('ManageP', this, '#454545')">Manage My Profile</button>
 <button style="font-size:18px" class="tablink" onclick="openTab('Logout', this, '#454545')">Logout of CMC System</button>
 
-
 <script>
 function openTab(tabName,elmnt,color) {
     var i, tabcontent, tablinks;
@@ -96,5 +95,33 @@ function openTab(tabName,elmnt,color) {
 document.getElementById("defaultOpen").click();
 </script>
      
+  <br>
+  <br> 
+ <br>
+ <h1> Inside the Individual Pages  </h1>
+ 
+ <p> Tab to the menu icon located under the the Translate feature. Open the sidebar menu by selecting the Enter key.    </p> 
+ 
+ <h2  Key choices ></h2>
+ <ul>   
+ <li> Close, press 'c'  </li>
+ <li> Visit Homepage, press 'a'  </li>
+ <li> Search for Schools, press 's'  </li>
+ <li> Manage Saved Schools, press 'm'  </li>
+ <li> Manage Profile, press 'p'  </li>
+ <li> Logout, press 'q'  </li>
+ </ul>
+ 
+  <h2> Mac Users </h4>
+  <p> If you are using a Mac device for the website, press Control + Alt + keychoice   </p>
+  
+  <br>
+  
+   <h2> Windows/Linux  Users </h4>
+  <p> If you are using Internet Explorer or Chrome browser for the website, press Alt + keychoice   </p>
+  <p> If you are using Firefox browser on Windows device, press Alt +  + Shift + keychoice   </p>
+  
+  
+ 
 </body>
 </html> 
