@@ -1,7 +1,7 @@
 <%@ page language="java" import="controller.*, entity.*, interfaces.*,java.util.*"%>
 <%@include file="verifyLogin.jsp"%>
 <%@include file= "TranslateFeature.jsp" %>
-<%@include file= "AdminMenu.jsp" %><br>
+<%@include file= "AdminMenu2.jsp" %><br>
 <%
 	AdminFuncController afc = (AdminFuncController)session.getAttribute("AdminController");
 	String schoolName = request.getParameter("SchoolName");
@@ -164,16 +164,16 @@ if(anyErrors!=null && anyErrors.equals("-5")){
       <td style="vertical-align: top;">EMPHASES<br>
       </td>
       <td style="vertical-align: top;">
-      <%if(emphases.size()==1){ %>
-      <input name="Emphasis1" value="<%=emphases.get(0)%>"><br><%}%>
-      <%if(emphases.size()==2){ %>
-      <input name="Emphasis2" value="<%=emphases.get(1)%>"><br><%}%>
-      <%if(emphases.size()==3){ %>
-      <input name="Emphasis3" value="<%=emphases.get(2)%>"><br><%}%>
-      <%if(emphases.size()==4){ %>
-      <input name="Emphasis4" value="<%=emphases.get(3)%>"><br><%}%>
-      <%if(emphases.size()==5){ %>
-      <input name="Emphasis5" value="<%=emphases.get(4)%>"><br><%}%>
+     
+      <input name="Emphasis1" value=<%if(emphases.size()>=1){ %><%=emphases.get(0)%><%}%><%else{out.print(""); }  %>><br>
+      
+      <input name="Emphasis2" value=<%if(emphases.size()>=2){ %><%=emphases.get(1)%><%}%><%else{out.print(""); }  %>><br>
+      
+      <input name="Emphasis3" value=<%if(emphases.size()>=3){ %><%=emphases.get(2)%><%}%><%else{out.print(""); }  %>><br>
+      
+      <input name="Emphasis4" value=<%if(emphases.size()>=4){ %><%=emphases.get(3)%><%}%><%else{out.print(""); }  %>><br>
+      
+      <input name="Emphasis5" value=<%if(emphases.size()>=5){ %><%=emphases.get(4)%><%}%><%else{out.print(""); }  %>><br>
       </td>
     </tr>
   </tbody>
