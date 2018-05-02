@@ -25,11 +25,12 @@
 	// check for any empty inputs
 	if(request.getParameter("State").length()==0 || request.getParameter("Location").length()==0 || request.getParameter("Control").length()==0
 	|| request.getParameter("Students").length()==0 || request.getParameter("FemPerc").length()==0 || request.getParameter("SatV").length()==0
-	|| request.getParameter("SatM").length()==0 || request.getParameter("Cost").length()==0 || request.getParameter("Cost").length()==0
+	|| request.getParameter("SatM").length()==0 ||request.getParameter("SatM").equals("") || request.getParameter("Cost").length()==0 || request.getParameter("Cost").length()==0
 	|| request.getParameter("FinAidPerc").length()==0 || request.getParameter("Applicants").length()==0 || request.getParameter("Admitted").length()==0
 	|| request.getParameter("Enrolled").length()==0 || request.getParameter("AcadScale").length()==0 || request.getParameter("SocScale").length()==0
 	|| request.getParameter("QualScale").length()==0){
-		response.sendRedirect("EditUniversity.jsp?Error=-5");
+		response.sendRedirect("EditUniversity.jsp?Error=-2&SchoolName="+request.getParameter("SchoolName"));
+		return;
 	}
 	int editUniv = afc.editUniversity(request.getParameter("SchoolName"), request.getParameter("State"), request.getParameter("Location"), 
 			request.getParameter("Control"), Integer.parseInt(request.getParameter("Students")),
@@ -41,16 +42,16 @@
 			Integer.parseInt(request.getParameter("QualScale")), emphases);
 	// check if the method edited the university
 	if(editUniv == -1){
-		response.sendRedirect("EditUniversity.jsp?Error=-1");
+		response.sendRedirect("EditUniversity.jsp?Error=-1&SchoolName="+request.getParameter("SchoolName"));
 	}
 	else if(editUniv == -2){
-		response.sendRedirect("EditUniversity.jsp?Error=-2");
+		response.sendRedirect("EditUniversity.jsp?Error=-2&SchoolName="+request.getParameter("SchoolName"));
 	}
 	else if(editUniv == -3){
-		response.sendRedirect("EditUniversity.jsp?Error=-3");
+		response.sendRedirect("EditUniversity.jsp?Error=-3&SchoolName="+request.getParameter("SchoolName"));
 	}
 	else if(editUniv == -4){
-		response.sendRedirect("EditUniversity.jsp?Error=-4");
+		response.sendRedirect("EditUniversity.jsp?Error=-4&SchoolName="+request.getParameter("SchoolName"));
 	}
 	else{
 		response.sendRedirect("ManageUniversities.jsp");

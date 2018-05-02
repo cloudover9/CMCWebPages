@@ -300,7 +300,7 @@ public class AdminFuncController {
 		}
 		u.setApplicants(applicants);
 		// admitted must be between 0 and 100
-		if (admitted < 0 || admitted > 100) {
+		if (admitted < -1 || admitted > 100) {
 			
 			//throw new IllegalArgumentException("Error: The admitted percentage is not in range.");
 			return -4;

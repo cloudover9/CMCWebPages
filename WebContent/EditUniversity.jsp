@@ -28,10 +28,7 @@ if(anyErrors!=null && anyErrors.equals("-3")){
 	out.println("Either the location or control fields have invalid inputs.<br>");
 }
 if(anyErrors!=null && anyErrors.equals("-4")){
-	out.println("<One or more of the fields are out of range.br>");
-}
-if(anyErrors!=null && anyErrors.equals("-5")){
-	out.println("<One or more of the fields are empty.br>");
+	out.println("One or more of the fields are out of range.<br>");
 }
 %>
 
