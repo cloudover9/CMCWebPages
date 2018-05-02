@@ -14,14 +14,14 @@ body {font-family: "Helvetica", sans-serif;}
     color: white;
     float: left;
     border: none;
-    outline: none;
-    cursor: pointer;
+    /* outline: none; */
+   /* cursor: pointer; */
     padding: 14px 16px;
     font-size: 18px;
     width: 25%;
 }
 
-.tablink:hover, .tablink:focus {
+.tablink:hover, .tablink:focus , a:focus{
    border:5px solid black;
     padding: 15px;
    
@@ -35,6 +35,9 @@ body {font-family: "Helvetica", sans-serif;}
     text-align: center;
 }
 
+a {
+color: #3344dd;
+}
 
 #Search {background-color:#FFC2C2;}
 #ManageSchool {background-color:#94FF94;}

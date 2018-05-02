@@ -35,7 +35,7 @@
 	}
 	else
 	{
-		response.sendRedirect("AdminHomepage.jsp");
+		response.sendRedirect("AdminHomepage2.jsp");
 	}
 	 
 %> 
